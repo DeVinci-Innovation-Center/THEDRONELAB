@@ -5,10 +5,6 @@ def recv_1(message_data):
     print(message_data)
 
 
-def recv_2(message_data):
-    print("received from 'topic_2' or 'topic_3':", message_data)
-
-
 intercom = Intercom()
 intercom.subscribe("hands", recv_1)
 # intercom.subscribe(["topic_2", "topic_3"], recv_2)

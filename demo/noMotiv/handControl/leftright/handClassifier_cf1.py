@@ -1,4 +1,4 @@
-from cv2 import cv2
+import cv2
 from dvbcdr.intercom.intercom import Intercom
 import mediapipe as mp
 mp_drawing = mp.solutions.drawing_utils
@@ -313,6 +313,7 @@ def execute():
         speed = str(video_slide[1])#str(id) +str(video_slide[1])
         # handsignal_publisher.publish(text2)
         # handsignal_publisher.publish(speed)
+        print("__________________:::",text)
         intercom.publish(Message("hands",text))
 
         cv2.putText(image, text[1:], (360,360), font, 1, (0, 0, 255), 2, cv2.LINE_4)

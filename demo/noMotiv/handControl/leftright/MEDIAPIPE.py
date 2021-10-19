@@ -158,7 +158,7 @@ def move_square(scf):
 def move_Q(scf):
     global Q
     start = time.time()
-    move = -0.01
+    move = -0.001
     now = time.time()
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         while time.time() - start < 20:
@@ -167,10 +167,10 @@ def move_Q(scf):
             if not Q.empty():
                 action = Q.get()
                 print("----------ACTION : ", action)
-                if action == "LEFT":
-                    move = 0.01
+                if action in "LEFTTHUMBUP":
+                    move = 0.005 # initial value : 0.01
                 else:
-                    move = -0.01
+                    move = -0.005 # initial value : 0.01
             mc.move_distance(distance_x_m=move, distance_y_m=0, distance_z_m=0, velocity=0.3)
             # if time.time() - now > 3:
             #     now = time.time()
