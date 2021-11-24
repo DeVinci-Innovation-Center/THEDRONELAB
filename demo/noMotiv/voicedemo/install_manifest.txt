@@ -1,0 +1,11 @@
+/install_location/share/doc/portaudio/README.md
+/install_location/share/doc/portaudio/LICENSE.txt
+/install_location/lib/pkgconfig/portaudio-2.0.pc
+/install_location/include/portaudio.h
+/install_location/include/pa_linux_alsa.h
+/install_location/lib/libportaudio.so
+/install_location/lib/libportaudio.a
+/install_location/lib/cmake/portaudio/portaudioTargets.cmake
+/install_location/lib/cmake/portaudio/portaudioTargets-debug.cmake
+/install_location/lib/cmake/portaudio/portaudioConfig.cmake
+/install_location/lib/cmake/portaudio/portaudioConfigVersion.cmake
