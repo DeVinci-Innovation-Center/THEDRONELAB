@@ -14,9 +14,10 @@ logging.basicConfig(level=logging.ERROR)
 
 from pynput import keyboard
 
-land =False
+Land=False
 URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E704')
 vector=np.array([0.0,0.0,0.0])
+
 def on_press(key):
     global land
     global vector
@@ -28,8 +29,8 @@ def on_press(key):
         print('special key {0} pressed'.format(
             key))
         if(key == keyboard.Key.space):
-            print("LANDING  ")      
-            land=True
+            print("LANDING  ")          
+            mc.land
         if(key == keyboard.Key.right):
             print("RIIGHT")
             vector[0]=travel
@@ -39,10 +40,12 @@ def on_press(key):
         if(key == keyboard.Key.up):
             print("UP")
             vector[1]=travel
-        if(key == keyboard.Key.down):
+        if(key == keyboard.Key.down):  
             print("DOWN")
             vector[1]=-travel
+        
         mc.start_linear_motion(*vector)
+        # vector=np.array([0.0,0.0,0.0])
         
         
         
@@ -61,16 +64,18 @@ if __name__ == '__main__':
 
     with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
         # We take off when the commander is created
-        
+        print("TAKE OFF")
+        a=0
         with MotionCommander(scf) as mc:
             start=time.time()
             time.sleep(1)
-            while(time.time()-start<20):
-                print(time.time()-start<20)
+            while(time.time()-start<10):
 
-            if(land):
-                mc.land
-
+                if(int(time.time()-start)!=a):
+                    print(time.time()-start) 
+                    a=int(time.time()-start  ) 
+                if(Land):
+                    break
 
 
                 
