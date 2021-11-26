@@ -16,10 +16,11 @@ from pynput import keyboard
 
 land =False
 URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E704')
-vector=np.array([0,0,0])
+vector=np.array([0.0,0.0,0.0])
 def on_press(key):
     global land
     global vector
+    travel = 0.3
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))   
@@ -31,18 +32,20 @@ def on_press(key):
             land=True
         if(key == keyboard.Key.right):
             print("RIIGHT")
-            vector[0]+=0.1
+            vector[0]=travel
         if(key == keyboard.Key.left):
-            print("RIIGHT")
-            vector[0]-=0.1
+            print("LEFT")
+            vector[0]=-travel
         if(key == keyboard.Key.up):
-            print("RIIGHT")
-            vector[1]+=0.1
+            print("UP")
+            vector[1]=travel
         if(key == keyboard.Key.down):
-            print("RIIGHT")
-            vector[1]-=0.1
-        mc.move_distance(*vector)
-        vector=[0,0,0]
+            print("DOWN")
+            vector[1]=-travel
+        mc.start_linear_motion(*vector)
+        
+        
+        
 
 
 
@@ -53,7 +56,7 @@ if __name__ == '__main__':
     cflib.crtp.init_drivers() 
 
     listener = keyboard.Listener(
-        on_press=on_press)
+        on_press=on_press)  
     listener.start()
 
     with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
@@ -61,15 +64,13 @@ if __name__ == '__main__':
         
         with MotionCommander(scf) as mc:
             start=time.time()
-            while(time.time()-start<5):
-                time.sleep(1)
-                if(land):
-                    break
+            time.sleep(1)
+            while(time.time()-start<20):
+                print(time.time()-start<20)
 
-                print(time.time()-start)
-            mc.stop()
-
-
-        
+            if(land):
+                mc.land
 
 
+
+                
