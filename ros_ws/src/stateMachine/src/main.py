@@ -16,9 +16,9 @@ def main():
     with sm:
         # Add states to the container
         print("adding state TAKEOFF")
-        smach.StateMachine.add("TAKEOFF", TAKEOFF(),transitions = {"succeeded":"DANCE", "aborted":"LAND", "preempted":"LAND"})
-        print("adding state DANCE")
-        smach.StateMachine.add("DANCE", DANCE(),transitions = {"succeeded":"HOME", "aborted":"LAND", "preempted":"LAND"})
+        smach.StateMachine.add("TAKEOFF", TAKEOFF(),transitions = {"succeeded":"FOLLOWCSV", "aborted":"LAND", "preempted":"LAND"})
+        print("adding state FOLLOWCSV")
+        smach.StateMachine.add("FOLLOWCSV", FOLLOWCSV(),transitions = {"succeeded":"FOLLOWCSV", "aborted":"LAND", "preempted":"HOME"})
         print("adding state HOME")
         smach.StateMachine.add("HOME", HOME(),transitions = {"succeeded":"LAND", "aborted":"LAND", "preempted":"LAND"})
         print("adding state LAND")

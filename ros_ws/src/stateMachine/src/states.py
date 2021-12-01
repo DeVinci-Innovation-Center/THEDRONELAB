@@ -5,11 +5,14 @@ import pycrazyswarm as pcs
 import numpy as np
 
 Z = 1.0
-yamlpath ="/home/anne/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
+yamlpath ="/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
+csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
+        print("yes")
         self.mydrone = pcs.Crazyswarm(yamlpath)
+        print("here")
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs        
 
@@ -39,9 +42,8 @@ class HOME(smach.State):
         self.mydrone = pcs.Crazyswarm(yamlpath)
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
-    
+
     def execute(self, ud):
-        rp.loginfo("starting HOME")
         for cf in self.allcfs.crazyflies:
             rp.loginfo(str(cf.id))
             pos = np.array(cf.initialPosition)+ np.array([0.0, 0.0, Z])
@@ -64,3 +66,30 @@ class DANCE(smach.State):
             cf.goTo(pos, 0, 4.0)
         self.timeHelper.sleep(4)
         return 'succeeded'
+
+class FOLLOWCSV(smach.State):
+    def __init__(self):
+        smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
+        self.mydrone = pcs.Crazyswarm(yamlpath)
+        self.timeHelper = self.mydrone.timeHelper
+        self.allcfs = self.mydrone.allcfs
+        global csvpath
+        self.points = np.genfromtxt(csvpath)
+        self.curentindex = 0
+
+    def execute(self, ud):
+        rp.loginfo("starting FOLLOWCSV")
+        for cf in self.allcfs.crazyflies:
+            target = np.array(self.points[self.curentindex%len(self.points)])
+            duration = calctime(np.array(cf.state.pos),target)
+            cf.goTo(target,0, duration)
+            while np.linalg.norm(target - np.array(cf.state.pos))<0.1:
+                self.timeHelper.sleep(duration/10)
+
+        self.curentindex+=1
+        return 'succeeded'
+
+def calctime(posDrone, posTarget):
+    diff = posDrone-posTarget
+    dist = np.linalg.norm(diff)
+    return dist*2.0
