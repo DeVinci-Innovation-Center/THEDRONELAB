@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD='/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build'
-export PYTHONPATH="/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel/lib/python3/dist-packages:$PYTHONPATH"

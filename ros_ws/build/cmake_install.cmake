@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/gtest/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/chatter/cmake_install.cmake")
+  include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/exemple/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine/cmake_install.cmake")
 

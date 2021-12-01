@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: chatter/all
+all: exemple/all
 all: pycrazyswarm/all
 all: stateMachine/all
 
@@ -63,6 +64,7 @@ all: stateMachine/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: chatter/preinstall
+preinstall: exemple/preinstall
 preinstall: pycrazyswarm/preinstall
 preinstall: stateMachine/preinstall
 
@@ -76,6 +78,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: chatter/clean
+clean: exemple/clean
 clean: pycrazyswarm/clean
 clean: stateMachine/clean
 
@@ -98,6 +101,24 @@ chatter/preinstall:
 chatter/clean: chatter/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 .PHONY : chatter/clean
+
+#=============================================================================
+# Directory level rules for directory exemple
+
+# Recursive "all" directory target.
+exemple/all:
+
+.PHONY : exemple/all
+
+# Recursive "preinstall" directory target.
+exemple/preinstall:
+
+.PHONY : exemple/preinstall
+
+# Recursive "clean" directory target.
+exemple/clean:
+
+.PHONY : exemple/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
