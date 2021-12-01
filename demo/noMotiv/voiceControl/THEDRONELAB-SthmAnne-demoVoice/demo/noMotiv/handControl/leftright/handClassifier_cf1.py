@@ -1,4 +1,3 @@
-import time
 import cv2
 from dvbcdr.intercom.intercom import Intercom
 import mediapipe as mp
@@ -265,25 +264,18 @@ def addToQueueAndAverage(d, image):
 def execute():
     print("execute")
     hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.5,max_num_hands=1)
-    cap = cv2.VideoCapture(0) #-1 to 0
+    cap = cv2.VideoCapture(0)
 
     memo = None
-    time.sleep(1)
-    if cap.isOpened():
-      cap.set(3, 640)
-      cap.set(4, 480)
+
     while cap.isOpened():
       success, image = cap.read()
       if not success:
         break
+
       # Flip the image horizontally for a later selfie-view display, and convert
       # the BGR image to RGB.
       image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
-      scale_percent = 60 # percent of original size
-      width = int(image.shape[1] * scale_percent / 100)
-      height = int(image.shape[0] * scale_percent / 100)
-      dim = (width, height)
-      #image = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
       # To improve performance, optionally mark the image as not writeable to
       # pass by reference.
       image.flags.writeable = False
@@ -307,7 +299,7 @@ def execute():
         image_signal = recognizeHandGesture(results.multi_hand_landmarks[0])
         video_signal = addToQueueAndAverage(d_signal, image_signal)
         #print("video_signal: ", video_signal)
-        text = str(video_signal[0])#str(id)+str(video_signal[0]) #-1 to 0
+        text = str(video_signal[0])#str(id)+str(video_signal[0])
         # handsignal_publisher.publish(text)
 
         #Get Slide: should be based on pose with goTo().

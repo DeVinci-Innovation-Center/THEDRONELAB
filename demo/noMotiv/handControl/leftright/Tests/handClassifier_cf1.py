@@ -265,7 +265,7 @@ def addToQueueAndAverage(d, image):
 def execute():
     print("execute")
     hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.5,max_num_hands=1)
-    cap = cv2.VideoCapture(0) #-1 to 0
+    cap = cv2.VideoCapture(2) #-1 to 0
 
     memo = None
     time.sleep(1)

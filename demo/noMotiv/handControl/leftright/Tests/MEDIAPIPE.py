@@ -6,10 +6,8 @@
 
 # x and y given as array_like objects
 import dash
-from dash import dcc
-#import dash_core_components as dcc
-from dash import html
-#import dash_html_components as html
+import dash_core_components as dcc
+import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import numpy as np
@@ -170,17 +168,60 @@ def move_Q(scf):
             if not Q.empty():
                 action = Q.get()
                 print("----------ACTION : ", action)
-                if action in "LEFTTHUMBUP":
-                    move = 0.005 # initial value : 0.01
+                #if action in "LEFTTHUMBUP":
+                    #movez = 0.002 # initial value : 0.01
+                if action in "LEFT":
+                    move = 0.002 # initial value : 0.01
+                #elif action in "UP":
+                    #movez = 0.002
+                #elif action in "DOWN":
+                    #movez = 0.002
                 else:
-                    move = -0.005 # initial value : 0.01
+                    move = -0.002 # initial value : 0.01
                     
                 
-            mc.move_distance(distance_x_m=move, distance_y_m=0, distance_z_m=0, velocity=0.3)
+            #mc.move_distance(distance_x_m=move, distance_y_m=0, distance_z_m=0, velocity=0.3)
+            mc.move_distance(distance_x_m=move, distance_y_m=0, distance_z_m=movez, velocity=0.3)
             # if time.time() - now > 3:
             #     now = time.time()
             #     move *= -1
         mc.land()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def move_up_and_release(scf):
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
@@ -362,9 +403,14 @@ def thread_drone():
 def sorter(msg):
     global Q
     print("received: ", msg)
-    if msg in "LEFTTHUMBUPRIGHT":
+    #if msg in "LEFTTHUMBUPRIGHT":
+        #Q.put(msg)
+    if msg in "LEFT":
         Q.put(msg)
-
+    if msg in "UP":
+        Q.put(msg)
+    if msg in "DOWN":
+        Q.put(msg)
 
 if __name__ == '__main__':
 
@@ -381,7 +427,7 @@ if __name__ == '__main__':
     w = 2 * np.pi / numRobots
     T = 2* 2 * np.pi / w 
 
-    URI = 'radio://0/27/2M/E7E7E7E704'#'radio://0/80/2M/E7E7E7E7E7'
+    URI = 'radio://0/80/2M/E7E7E7E7E7'
     DEFAULT_HEIGHT = 0.3
     DEFAULT_TRANSLATION = 0.3
     is_deck_attached = True

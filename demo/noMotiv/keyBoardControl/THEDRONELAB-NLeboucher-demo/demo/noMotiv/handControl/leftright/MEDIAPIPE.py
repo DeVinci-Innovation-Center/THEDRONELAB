@@ -6,10 +6,8 @@
 
 # x and y given as array_like objects
 import dash
-from dash import dcc
-#import dash_core_components as dcc
-from dash import html
-#import dash_html_components as html
+import dash_core_components as dcc
+import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import numpy as np
@@ -161,7 +159,6 @@ def move_Q(scf):
     global Q
     start = time.time()
     move = -0.001
-    movez = 0.0
     now = time.time()
     with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
         while time.time() - start < 20:
@@ -174,8 +171,6 @@ def move_Q(scf):
                     move = 0.005 # initial value : 0.01
                 else:
                     move = -0.005 # initial value : 0.01
-                    
-                
             mc.move_distance(distance_x_m=move, distance_y_m=0, distance_z_m=0, velocity=0.3)
             # if time.time() - now > 3:
             #     now = time.time()
@@ -381,7 +376,7 @@ if __name__ == '__main__':
     w = 2 * np.pi / numRobots
     T = 2* 2 * np.pi / w 
 
-    URI = 'radio://0/27/2M/E7E7E7E704'#'radio://0/80/2M/E7E7E7E7E7'
+    URI = 'radio://0/80/2M/E7E7E7E7E7'
     DEFAULT_HEIGHT = 0.3
     DEFAULT_TRANSLATION = 0.3
     is_deck_attached = True
@@ -482,7 +477,7 @@ if __name__ == '__main__':
 
         if is_deck_attached:
             logconf.start()
-            # move_up_and_release(scf)        #drop drone.
+            #move_up_and_release(scf)        #drop drone.
             #FF_recover(scf)  #recover from freefall
             # move_square(scf)               
             move_Q(scf)
