@@ -444,6 +444,12 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
+listener_BINARY_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/listener
+
+//Value Computed by CMake
+listener_SOURCE_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/listener
+
+//Value Computed by CMake
 pycrazyswarm_BINARY_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm
 
 //The directory containing a CMake configuration file for pycrazyswarm.

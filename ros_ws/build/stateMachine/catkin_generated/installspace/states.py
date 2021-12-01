@@ -5,11 +5,11 @@ import pycrazyswarm as pcs
 import numpy as np
 
 Z = 1.0
-
+yamlpath ="/home/anne/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
-        self.mydrone = pcs.Crazyswarm()
+        self.mydrone = pcs.Crazyswarm(yamlpath)
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs        
 
@@ -22,7 +22,7 @@ class TAKEOFF(smach.State):
 class LAND(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
-        self.mydrone = pcs.Crazyswarm()
+        self.mydrone = pcs.Crazyswarm(yamlpath)
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
     
@@ -36,7 +36,7 @@ class LAND(smach.State):
 class HOME(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
-        self.mydrone = pcs.Crazyswarm()
+        self.mydrone = pcs.Crazyswarm(yamlpath)
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
     
@@ -52,7 +52,7 @@ class HOME(smach.State):
 class DANCE(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
-        self.mydrone = pcs.Crazyswarm()
+        self.mydrone = pcs.Crazyswarm(yamlpath)
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
 
