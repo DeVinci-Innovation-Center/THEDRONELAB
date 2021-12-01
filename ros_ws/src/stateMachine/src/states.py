@@ -58,7 +58,7 @@ class DANCE(smach.State):
         rp.loginfo("starting DANCE")
         for cf in self.allcfs.crazyflies:
             rp.loginfo(str(cf.id))
-            pos = np.array(cf.initialPosition) + np.array([0.5, 0.5, 0.5])
-            cf.goTo(pos, 0, 1.0)
+            pos = np.array(cf.initialPosition) + np.array([0.1, 0.1, 0.5])
+            cf.goTo(pos, 0, 4.0)
         self.timeHelper.sleep(4)
         return 'succeeded'

@@ -52,3 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chatter" TYPE FILE FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/chatter/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/chatter" TYPE PROGRAM FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/chatter/catkin_generated/installspace/main.py")
+endif()
+

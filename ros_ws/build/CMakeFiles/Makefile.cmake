@@ -22,6 +22,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/CMakeLists.txt"
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/chatter/CMakeLists.txt"
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/chatter/package.xml"
+  "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/chatter/src/main.py"
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/pycrazyswarm/CMakeLists.txt"
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/pycrazyswarm/package.xml"
   "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/pycrazyswarm/setup.py"
