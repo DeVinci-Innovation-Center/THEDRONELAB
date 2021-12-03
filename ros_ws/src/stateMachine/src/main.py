@@ -4,10 +4,18 @@ import pycrazyswarm
 import smach
 import smach_ros
 import std_msgs
+import signal
 from states import *
 
+global sm
+
+def signal_handler(sig, frame):
+    global sm
+    print('You pressed Ctrl+C!')
+    sm.request_preempt()
 
 def main():
+    global sm
     # rp.init_node("smach_state_machine")
     # Create a SMACH state machine
     sm = smach.StateMachine(outcomes=['FINISHED', 'ENDED'])
@@ -31,4 +39,5 @@ def main():
 
 if __name__ == '__main__':
     print("starting ...")
+    signal.signal(signal.SIGINT, signal_handler)
     main()

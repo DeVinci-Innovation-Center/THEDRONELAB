@@ -20,7 +20,7 @@ class TAKEOFF(smach.State):
     def execute(self, ud):
         rp.loginfo("starting takeoff")
         self.allcfs.takeoff(targetHeight=Z, duration=1.0+Z)
-        self.timeHelper.sleep(1.5+Z)
+        self.timeHelper.sleep(Z)
         time.sleep(5)
         return 'succeeded'
 
@@ -80,15 +80,18 @@ class FOLLOWCSV(smach.State):
         self.curentindex = 0
 
     def execute(self, ud):
-        rp.loginfo("starting FOLLOWnp.array(cf.state.pos)CSV")
+        rp.loginfo("starting FOLLOWCSV")
         for cf in self.allcfs.crazyflies:
             target = np.array(self.points[self.curentindex%len(self.points)])
             duration = calctime(cf.position(),target)
             cf.goTo(target,0, duration)
             print(duration)
             while np.linalg.norm(target - cf.position())>0.1:
+                if self.preempt_requested():
+                    self.service_preempt()
+                    return 'preempted'
                 # self.timeHelper.sleep(duration)
-                time.sleep(duration)
+                time.sleep(duration/100)
 
         self.curentindex+=1
         return 'succeeded'
@@ -96,4 +99,4 @@ class FOLLOWCSV(smach.State):
 def calctime(posDrone, posTarget):
     diff = posDrone-posTarget
     dist = np.linalg.norm(diff)
-    return dist*10.0
+    return dist*2.5
