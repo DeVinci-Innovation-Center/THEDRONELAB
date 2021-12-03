@@ -1,7 +1,7 @@
-from os import W_OK
+#from os import W_OK
 import speech_recognition as sr
 import time
-
+from playsound import playsound
 def speech(source):   
     try :
         # print("Speak Anything :")
@@ -13,6 +13,17 @@ def speech(source):
         # print("FAIL")
         return ""
 
+def token(x):
+    return {
+        "alpha": 1,
+        "espilon": 2,
+    }.get(x, 0)
+
+def command(x):
+    return {
+        "décollage": 1,
+        "droite": 2,
+    }.get(x, 0)
 
 r = sr.Recognizer()
 
@@ -24,6 +35,8 @@ with sr.Microphone() as source:
     #     print("You said : {}".format(text))
     # except :
     #     print("FAIL")
+    
+
     start=time.time()
     words=""
     while(time.time()-start<60):
@@ -36,6 +49,20 @@ with sr.Microphone() as source:
             beginning = words.find("drone")
             words = words[beginning::]
             wordarr = words.split(" ")
-            print(len(wordarr))
+            droneNumber = token(wordarr[1])
+            print("token :"+wordarr[1])
+            print("new token :"+droneNumber)
+            if (droneNumber): 
+                if(command(wordarr[2])):
+                    #return (droneNumber+" "+command[wordarr[2]])
+                else: break
+            else: break
             print(words)
             words=""
+        if("explosion" in words):
+            words=words.replace("explosion","") 
+            playsound('/home/anne/Downloads/bruit-dexplosion.mp3')
+   
+
+
+  
