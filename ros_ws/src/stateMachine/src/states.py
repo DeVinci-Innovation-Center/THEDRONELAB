@@ -4,8 +4,8 @@ import std_msgs
 import pycrazyswarm as pcs
 import numpy as np
 
-Z = 1.0
-yamlpath ="/home/anne/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
+Z = 0.6
+yamlpath ="/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
@@ -44,7 +44,7 @@ class HOME(smach.State):
         rp.loginfo("starting HOME")
         for cf in self.allcfs.crazyflies:
             rp.loginfo(str(cf.id))
-            pos = np.array(cf.initialPosition)+ np.array([0.0, 0.0, Z])
+            pos = np.array([0.0, 0.0, Z])
             cf.goTo(pos, 0, 5.0)
         self.timeHelper.sleep(5.0)
         return 'succeeded'
@@ -60,7 +60,7 @@ class DANCE(smach.State):
         rp.loginfo("starting DANCE")
         for cf in self.allcfs.crazyflies:
             rp.loginfo(str(cf.id))
-            pos = np.array(cf.initialPosition) + np.array([0.2, 0.2, Z])
+            pos = np.array([0.2, 0.2, Z])
             cf.goTo(pos, 0, 4.0)
         self.timeHelper.sleep(4)
         return 'succeeded'
