@@ -4,9 +4,10 @@ import std_msgs
 import pycrazyswarm as pcs
 import numpy as np
 
-print("starting")
-mydrone = pcs.Crazyswarm()
-print("swarm aquired")
-timeHelper = mydrone.timeHelper
-allcfs = mydrone.allcfs 
+csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
+
+
+points = np.genfromtxt(csvpath, delimiter=",") / 10
+
+print(points)
 

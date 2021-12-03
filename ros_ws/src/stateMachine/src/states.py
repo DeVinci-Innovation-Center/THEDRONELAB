@@ -1,6 +1,7 @@
 import rospy as rp
 import smach
 import std_msgs
+import time
 import pycrazyswarm as pcs
 import numpy as np
 
@@ -20,6 +21,7 @@ class TAKEOFF(smach.State):
         rp.loginfo("starting takeoff")
         self.allcfs.takeoff(targetHeight=Z, duration=1.0+Z)
         self.timeHelper.sleep(1.5+Z)
+        time.sleep(5)
         return 'succeeded'
 
 class LAND(smach.State):
@@ -74,17 +76,19 @@ class FOLLOWCSV(smach.State):
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
         global csvpath
-        self.points = np.genfromtxt(csvpath)
+        self.points = np.genfromtxt(csvpath, delimiter=",") / 10.0
         self.curentindex = 0
 
     def execute(self, ud):
-        rp.loginfo("starting FOLLOWCSV")
+        rp.loginfo("starting FOLLOWnp.array(cf.state.pos)CSV")
         for cf in self.allcfs.crazyflies:
             target = np.array(self.points[self.curentindex%len(self.points)])
-            duration = calctime(np.array(cf.state.pos),target)
+            duration = calctime(cf.position(),target)
             cf.goTo(target,0, duration)
-            while np.linalg.norm(target - np.array(cf.state.pos))<0.1:
-                self.timeHelper.sleep(duration/10)
+            print(duration)
+            while np.linalg.norm(target - cf.position())>0.1:
+                # self.timeHelper.sleep(duration)
+                time.sleep(duration)
 
         self.curentindex+=1
         return 'succeeded'
@@ -92,4 +96,4 @@ class FOLLOWCSV(smach.State):
 def calctime(posDrone, posTarget):
     diff = posDrone-posTarget
     dist = np.linalg.norm(diff)
-    return dist*2.0
+    return dist*10.0
