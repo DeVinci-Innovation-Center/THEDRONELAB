@@ -1,0 +1,1 @@
+./test.py  --configpath "/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/"

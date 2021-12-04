@@ -11,7 +11,9 @@ global sm
 
 def signal_handler(sig, frame):
     global sm
-    print('You pressed Ctrl+C!')
+    print('--------------------------------')
+    print('---------PREEMPT !!!------------')
+    print('--------------------------------')
     sm.request_preempt()
 
 def main():
@@ -39,5 +41,5 @@ def main():
 
 if __name__ == '__main__':
     print("starting ...")
-    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGQUIT, signal_handler)
     main()
