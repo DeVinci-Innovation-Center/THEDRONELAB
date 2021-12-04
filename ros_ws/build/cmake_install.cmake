@@ -134,6 +134,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/chatter/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/listener/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/cmake_install.cmake")
+  include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/cmake_install.cmake")
   include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine/cmake_install.cmake")
 
 endif()

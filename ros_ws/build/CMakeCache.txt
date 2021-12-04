@@ -462,6 +462,12 @@ pycrazyswarm_SOURCE_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/py
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 
 //Value Computed by CMake
+scanner_BINARY_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner
+
+//Value Computed by CMake
+scanner_SOURCE_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/scanner
+
+//Value Computed by CMake
 stateMachine_BINARY_DIR:STATIC=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine
 
 //Value Computed by CMake
@@ -617,7 +623,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
