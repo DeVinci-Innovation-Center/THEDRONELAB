@@ -97,6 +97,10 @@ class FOLLOWCSV(smach.State):
         return 'succeeded'
 
 def calctime(posDrone, posTarget):
-    diff = posDrone-posTarget
-    dist = np.linalg.norm(diff)
-    return dist*2.5
+    try:
+        diff = posDrone-posTarget
+        dist = np.linalg.norm(diff)
+        return dist*2.5
+    except Exception:
+        return 10
+    
