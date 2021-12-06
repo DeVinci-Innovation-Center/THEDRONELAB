@@ -28,7 +28,7 @@ def param_deck_flow(name, value_str):
 
 
 Land=False
-URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E702')
+URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
 vector=np.array([0.0,0.0,0.0])
 
 def on_press(key):
@@ -94,5 +94,4 @@ if __name__ == '__main__':
                         a=int(time.time()-start  ) 
                     if(Land):
                         break
-
 
