@@ -8,6 +8,11 @@ def on_press(key):
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))   
+        if(key.char=='t'):
+            print("TOP")
+        if(key.char=='g'):
+            print("DOWN")
+
     except AttributeError:
         print('special key {0} pressed'.format(
             key))
@@ -23,6 +28,8 @@ def on_press(key):
         if(key == keyboard.Key.up):
             print("UP")
 
+        if(key == keyboard.Key.down):
+            print("DOWN")
         if(key == keyboard.Key.down):
             print("DOWN")
 
