@@ -1,0 +1,8 @@
+prefix=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel
+
+Name: scanner
+Description: Description of scanner
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

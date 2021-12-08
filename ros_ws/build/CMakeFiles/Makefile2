@@ -57,6 +57,7 @@ all: gtest/all
 all: chatter/all
 all: listener/all
 all: pycrazyswarm/all
+all: scanner/all
 all: stateMachine/all
 
 .PHONY : all
@@ -66,6 +67,7 @@ preinstall: gtest/preinstall
 preinstall: chatter/preinstall
 preinstall: listener/preinstall
 preinstall: pycrazyswarm/preinstall
+preinstall: scanner/preinstall
 preinstall: stateMachine/preinstall
 
 .PHONY : preinstall
@@ -80,6 +82,7 @@ clean: gtest/clean
 clean: chatter/clean
 clean: listener/clean
 clean: pycrazyswarm/clean
+clean: scanner/clean
 clean: stateMachine/clean
 
 .PHONY : clean
@@ -194,6 +197,24 @@ pycrazyswarm/preinstall:
 pycrazyswarm/clean:
 
 .PHONY : pycrazyswarm/clean
+
+#=============================================================================
+# Directory level rules for directory scanner
+
+# Recursive "all" directory target.
+scanner/all:
+
+.PHONY : scanner/all
+
+# Recursive "preinstall" directory target.
+scanner/preinstall:
+
+.PHONY : scanner/preinstall
+
+# Recursive "clean" directory target.
+scanner/clean:
+
+.PHONY : scanner/clean
 
 #=============================================================================
 # Directory level rules for directory stateMachine

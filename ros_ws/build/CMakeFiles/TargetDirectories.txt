@@ -57,6 +57,13 @@
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/CMakeFiles/rebuild_cache.dir
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/CMakeFiles/edit_cache.dir
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/CMakeFiles/test.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/install/strip.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/install/local.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/install.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/list_install_components.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/rebuild_cache.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/edit_cache.dir
+/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/CMakeFiles/test.dir
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine/CMakeFiles/install/strip.dir
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine/CMakeFiles/install/local.dir
 /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/stateMachine/CMakeFiles/install.dir

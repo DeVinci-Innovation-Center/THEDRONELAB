@@ -4,10 +4,20 @@ import pycrazyswarm
 import smach
 import smach_ros
 import std_msgs
+import signal
 from states import *
 
+global sm
+
+def signal_handler(sig, frame):
+    global sm
+    print('--------------------------------')
+    print('---------PREEMPT !!!------------')
+    print('--------------------------------')
+    sm.request_preempt()
 
 def main():
+    global sm
     # rp.init_node("smach_state_machine")
     # Create a SMACH state machine
     sm = smach.StateMachine(outcomes=['FINISHED', 'ENDED'])
@@ -16,9 +26,9 @@ def main():
     with sm:
         # Add states to the container
         print("adding state TAKEOFF")
-        smach.StateMachine.add("TAKEOFF", TAKEOFF(),transitions = {"succeeded":"DANCE", "aborted":"LAND", "preempted":"LAND"})
-        print("adding state DANCE")
-        smach.StateMachine.add("DANCE", DANCE(),transitions = {"succeeded":"HOME", "aborted":"LAND", "preempted":"LAND"})
+        smach.StateMachine.add("TAKEOFF", TAKEOFF(),transitions = {"succeeded":"FOLLOWCSV", "aborted":"LAND", "preempted":"LAND"})
+        print("adding state FOLLOWCSV")
+        smach.StateMachine.add("FOLLOWCSV", FOLLOWCSV(),transitions = {"succeeded":"FOLLOWCSV", "aborted":"LAND", "preempted":"HOME"})
         print("adding state HOME")
         smach.StateMachine.add("HOME", HOME(),transitions = {"succeeded":"LAND", "aborted":"LAND", "preempted":"LAND"})
         print("adding state LAND")
@@ -31,4 +41,5 @@ def main():
 
 if __name__ == '__main__':
     print("starting ...")
+    signal.signal(signal.SIGQUIT, signal_handler)
     main()
