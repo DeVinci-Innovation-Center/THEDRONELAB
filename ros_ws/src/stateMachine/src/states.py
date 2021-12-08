@@ -5,7 +5,7 @@ import time
 import pycrazyswarm as pcs
 import numpy as np
 
-Z = 0.6
+Z = 0.4
 yamlpath ="/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
 csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
 class TAKEOFF(smach.State):
@@ -87,9 +87,9 @@ class FOLLOWCSV(smach.State):
 
     def execute(self, ud):
         rp.loginfo("starting FOLLOWCSV")
-        self.points = np.genfromtxt(ud.csvpath, delimiter=",")
-        self.points+=np.array([0,0,Z])
         try:
+            self.points = np.genfromtxt(ud.csvpath, delimiter=",")
+            self.points+=np.array([0,0,Z])
             for cf in self.allcfs.crazyflies:
                 if cf.id == ud.id:
                     cf.setGroupMask(ud.id)
@@ -105,7 +105,7 @@ class FOLLOWCSV(smach.State):
                             return 'preempted'
                         # self.timeHelper.sleep(duration)
                         time.sleep(duration/100)
-                        print(f'on our way  to {self.curentindex}!!!')
+                        # print(f'on our way  to {self.curentindex}!!!')
             self.curentindex+=1
             if len(self.points)<=self.curentindex:
                 self.curentindex = 0
