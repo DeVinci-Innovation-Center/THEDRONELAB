@@ -381,7 +381,7 @@ if __name__ == '__main__':
     w = 2 * np.pi / numRobots
     T = 2* 2 * np.pi / w 
 
-    URI = 'radio://0/27/2M/E7E7E7E704'#'radio://0/80/2M/E7E7E7E7E7'
+    URI = 'radio://0/27/2M/E7E7E7E702'#'radio://0/80/2M/E7E7E7E7E7'
     DEFAULT_HEIGHT = 0.3
     DEFAULT_TRANSLATION = 0.3
     is_deck_attached = True

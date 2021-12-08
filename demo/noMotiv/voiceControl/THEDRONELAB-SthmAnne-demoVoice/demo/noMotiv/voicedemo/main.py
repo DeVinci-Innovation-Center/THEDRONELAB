@@ -18,7 +18,7 @@ if __name__ == '_main_':
 
     global vol
     vol = False
-URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E704')
+URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E702')
 r = sr.Recognizer()
 
 with sr.Microphone() as source:
