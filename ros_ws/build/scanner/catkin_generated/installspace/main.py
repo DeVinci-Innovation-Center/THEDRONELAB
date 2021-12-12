@@ -84,7 +84,10 @@ if __name__ == '__main__':
             #         heer.land()
             #         pos = heer.get_position()
             #         print(pos)
-            n['initialPosition'] = str(np.array([0,0,0]))
+            n['initialPosition']=[]
+            n['initialPosition'].append(0.00)
+            n['initialPosition'].append(0.00)
+            n['initialPosition'].append(0.00)
 
     def checkBattery():
             # query each CF

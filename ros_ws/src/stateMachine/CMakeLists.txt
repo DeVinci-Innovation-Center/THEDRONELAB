@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   pycrazyswarm
 )
-
+catkin_python_setup()
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -186,11 +186,10 @@ catkin_install_python(PROGRAMS
 # )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
+install(FILES
+  launch/DVIC.launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 #############
 ## Testing ##

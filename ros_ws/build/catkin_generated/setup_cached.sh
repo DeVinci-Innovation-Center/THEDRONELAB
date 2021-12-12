@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build'
+export PWD='/home/orca/dvic/THEDRONELAB/ros_ws/build'
