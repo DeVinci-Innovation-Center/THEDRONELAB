@@ -1,4 +1,4 @@
-prefix=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel
+prefix=/home/orca/dvic/THEDRONELAB/ros_ws/devel
 
 Name: stateMachine
 Description: Description of stateMachine

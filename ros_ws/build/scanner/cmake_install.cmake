@@ -1,8 +1,8 @@
-# Install script for directory: /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/scanner
+# Install script for directory: /home/orca/dvic/THEDRONELAB/ros_ws/src/scanner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/orca/dvic/THEDRONELAB/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scanner.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/orca/dvic/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scanner.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner/cmake" TYPE FILE FILES
-    "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scannerConfig.cmake"
-    "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scannerConfig-version.cmake"
+    "/home/orca/dvic/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scannerConfig.cmake"
+    "/home/orca/dvic/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/scannerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner" TYPE FILE FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/scanner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scanner" TYPE FILE FILES "/home/orca/dvic/THEDRONELAB/ros_ws/src/scanner/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/main.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scanner" TYPE PROGRAM FILES "/home/orca/dvic/THEDRONELAB/ros_ws/build/scanner/catkin_generated/installspace/main.py")
 endif()
 

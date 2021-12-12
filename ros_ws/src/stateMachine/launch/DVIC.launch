@@ -1,0 +1,9 @@
+<launch>
+    <param name="csv_path" value="/home/dronelab/DRONELAB/THEDRONELAB"/>
+    <param name="crazyclies_yaml_path" value="/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"/>
+    <node name="drone1" pkg="stateMachine" type="main.py" output="screen">
+        <param name="dn" value="1"/>
+        <param name="mr" value="2"/>
+        <param name="csvs" value="V"/>
+    </node>
+</launch>

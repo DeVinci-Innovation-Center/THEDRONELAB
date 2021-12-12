@@ -1,8 +1,8 @@
-# Install script for directory: /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/pycrazyswarm
+# Install script for directory: /home/orca/dvic/THEDRONELAB/ros_ws/src/pycrazyswarm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/orca/dvic/THEDRONELAB/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarm.pc")
+  include("/home/orca/dvic/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/safe_execute_install.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/orca/dvic/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarm.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pycrazyswarm/cmake" TYPE FILE FILES
-    "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarmConfig.cmake"
-    "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarmConfig-version.cmake"
+    "/home/orca/dvic/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarmConfig.cmake"
+    "/home/orca/dvic/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/installspace/pycrazyswarmConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pycrazyswarm" TYPE FILE FILES "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/pycrazyswarm/package.xml")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/pycrazyswarm/catkin_generated/safe_execute_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pycrazyswarm" TYPE FILE FILES "/home/orca/dvic/THEDRONELAB/ros_ws/src/pycrazyswarm/package.xml")
 endif()
 

@@ -1,2 +1,2 @@
 chatter:listener:pycrazyswarm:scanner:stateMachine
--DCATKIN_DEVEL_PREFIX=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/orca/dvic/THEDRONELAB/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/orca/dvic/THEDRONELAB/ros_ws/install -G Unix Makefiles
