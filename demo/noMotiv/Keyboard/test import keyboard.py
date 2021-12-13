@@ -6,10 +6,11 @@ def on_press(key):
     global vector
     travel = 0.3
     try:
-        print('alphanumeric key {0} pressed'.format(
+        print('alphanumeric key -{0}- pressed'.format(
             key.char))   
         if(key.char=='t'):
             print("TOP")
+
         if(key.char=='g'):
             print("DOWN")
 
@@ -21,9 +22,11 @@ def on_press(key):
             land=True
         if(key == keyboard.Key.right):
             print("RIIGHT")
+            time.sleep(1)
 
         if(key == keyboard.Key.left):
             print("LEFT")
+            time.sleep(1)
 
         if(key == keyboard.Key.up):
             print("UP")

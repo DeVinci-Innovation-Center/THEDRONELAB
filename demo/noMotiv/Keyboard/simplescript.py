@@ -14,21 +14,8 @@ logging.basicConfig(level=logging.ERROR)
 
 from pynput import keyboard
 
-def param_deck_flow(name, value_str):
-    value = int(value_str)
-    print(value)
-    global is_deck_attached
-    if value:
-        is_deck_attached = True
-        print('Deck is attached!')
-    else:
-        is_deck_attached = False
-        print('Deck is NOT attached!')
-
-
-
 Land=False
-URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E701')
+URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
 vector=np.array([0.0,0.0,0.0])
 
 def on_press(key):
@@ -40,7 +27,7 @@ def on_press(key):
             key.char))  
         if(key.char=='t'):
             print("TOP")
-            vector[0]= 0
+            vector[0]=0
             vector[1]=0
             vector[2]=travel
         if(key.char=='g'):
@@ -48,14 +35,14 @@ def on_press(key):
             vector[0]=0
             vector[1]=0
             vector[2]=-travel
-    except AttributeError:
+    except AttributeError :
         print('special key {0} pressed'.format(
             key))
         if(key == keyboard.Key.space):
+            mc.move_distance(0.0,0.0,-0.3)
             mc.land
             Land=True
             print("LANDING  ")          
-            
         if(key == keyboard.Key.right):
             print("RIIGHT")
             vector[0]=travel
@@ -74,7 +61,7 @@ def on_press(key):
         if(key == keyboard.Key.down):  
             print("DOWN")
             vector[0]=0
-            vector[1]= -travel
+            vector[1]=-travel
             vector[2]=0
 
         mc.start_linear_motion(vector[0],vector[1],vector[2])
@@ -95,18 +82,20 @@ if __name__ == '__main__':
           # scf.cf.param.add_update_callback(group="deck", name="bcFlow2",
         #                         cb=param_deck_flow)
         time.sleep(1)
-
+        
         # if is_deck_attached:
         with MotionCommander(scf) as mc:
+            
             print("TAKE OFF")
             start=time.time()
             time.sleep(1)
             mc.move_distance(0.0,0.0,0.3)
-            while(time.time()-start<10):
-
+            while(time.time()-start<30):
                 if(int(time.time()-start)!=a):
                     print(time.time()-start) 
                     a=int(time.time()-start  ) 
+                    
+
                 if(Land):
                     break
 
