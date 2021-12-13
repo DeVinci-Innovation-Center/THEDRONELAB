@@ -8,9 +8,12 @@ import smach
 import smach_ros
 import std_msgs
 import signal
+import sys
 try:
-    import mystates.states as states
+    import mypkg.states as states
 except Exception:
+    print("import states from local")
+    # sys.path = "/home/orca/dvic/THEDRONELAB/ros_ws/src/stateMachine/src"
     import states
 from pynput import keyboard
 global sm
@@ -37,7 +40,7 @@ def main():
         sm.userdata.id = int(rp.get_param("~dn"))
     except KeyError:
         print("failed to get drone number")
-        sm.userdata.id = 2
+        sm.userdata.id = 1
     try:
         sm.userdata.maxreps = int(rp.get_param("~mr"))
     except KeyError:

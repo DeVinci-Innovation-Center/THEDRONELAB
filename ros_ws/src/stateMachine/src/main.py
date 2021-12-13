@@ -8,10 +8,8 @@ import smach
 import smach_ros
 import std_msgs
 import signal
-try:
-    import mystates.states as states
-except Exception:
-    import states
+import sys
+import states
 from pynput import keyboard
 global sm
 
@@ -47,7 +45,7 @@ def main():
         homedir = rp.get_param("csv_path")
     except KeyError:
         print("failed to get csvpath")
-        homedir = "/home/dronelab/DRONELAB/THEDRONELAB"
+        homedir = "/home/orca/dvic/THEDRONELAB"
     sm.userdata.points = []
     sm.userdata.index = 0
     try:

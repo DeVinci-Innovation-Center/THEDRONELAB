@@ -1,13 +1,9 @@
 import rospy as rp
 import smach
 import std_msgs
+import sys
 import time
-try:
-    import pycrazyswarm.pycrazyswarm as pcs
-    print("importing from pycrazyswarm")
-except Exception:
-    print("importing pycrazyswarm from local")
-    import pycrazyswarm as pcs
+import pycrazyswarm as pcs
 import numpy as np
 
 Z = 1
@@ -15,7 +11,7 @@ try:
     yamlpath = rp.get_param("crazyflies_yaml_path")
 except KeyError:
     print("no yamlpath given in parameters so loading default: ")
-    yamlpath = "/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
+    yamlpath = "/home/orca/dvic/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
     print(yamlpath)
 # csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
 
@@ -23,7 +19,7 @@ except KeyError:
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded', 'preempted', 'aborted'], input_keys=['id'])
-        print("init crazyswarm is done")
+        print("init crazyswarm is happening")
         self.mydrone = pcs.Crazyswarm(yamlpath)
         print("init crazyswarm is done")
         self.timeHelper = self.mydrone.timeHelper
@@ -33,9 +29,10 @@ class TAKEOFF(smach.State):
         for cf in self.allcfs.crazyflies:
             if cf.id == int(ud.id):
                 rp.loginfo("starting takeoff")
+                print("starting takeoff")
                 cf.takeoff(targetHeight=Z, duration=1.0+Z)
-                self.timeHelper.sleep(Z)
-                time.sleep(3)
+                # self.timeHelper.sleep(Z)
+                time.sleep(5)
         return 'succeeded'
 
 

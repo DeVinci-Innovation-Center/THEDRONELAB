@@ -1,11 +1,13 @@
 import rospy as rp
 import smach
 import std_msgs
+import sys
 import time
 try:
-    import pycrazyswarm.pycrazyswarm as pcs
+    import a.pycrazyswarm as pcs
     print("importing from pycrazyswarm")
 except Exception:
+    sys.path.append("/home/orca/dvic/THEDRONELAB/ros_ws/src/stateMachine/")
     print("importing pycrazyswarm from local")
     import pycrazyswarm as pcs
 import numpy as np
@@ -35,7 +37,7 @@ class TAKEOFF(smach.State):
                 rp.loginfo("starting takeoff")
                 cf.takeoff(targetHeight=Z, duration=1.0+Z)
                 self.timeHelper.sleep(Z)
-                time.sleep(3)
+                time.sleep(5)
         return 'succeeded'
 
 
