@@ -6,14 +6,13 @@ try:
     import pycrazyswarm.pycrazyswarm as pcs
     print("importing from pycrazyswarm")
 except Exception:
-    print("importing from local")
+    print("importing pycrazyswarm from local")
     import pycrazyswarm as pcs
 import numpy as np
 
-Z = 0.4
-print("I HAVE BEEN IMPORTED")
+Z = 1
 try:
-    yamlpath = rp.get_param("crazyclies_yaml_path")
+    yamlpath = rp.get_param("crazyflies_yaml_path")
 except KeyError:
     print("no yamlpath given in parameters so loading default: ")
     yamlpath = "/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
@@ -24,9 +23,9 @@ except KeyError:
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded', 'preempted', 'aborted'], input_keys=['id'])
-        print("yes")
+        print("init crazyswarm is done")
         self.mydrone = pcs.Crazyswarm(yamlpath)
-        print("here")
+        print("init crazyswarm is done")
         self.timeHelper = self.mydrone.timeHelper
         self.allcfs = self.mydrone.allcfs
 

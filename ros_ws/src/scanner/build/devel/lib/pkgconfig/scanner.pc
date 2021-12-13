@@ -1,0 +1,8 @@
+prefix=/home/orca/dvic/THEDRONELAB/ros_ws/src/scanner/build/devel
+
+Name: scanner
+Description: Description of scanner
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

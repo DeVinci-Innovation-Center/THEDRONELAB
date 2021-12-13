@@ -84,7 +84,7 @@ if __name__ == '__main__':
             #         heer.land()
             #         pos = heer.get_position()
             #         print(pos)
-            n['initialPosition']=[]
+            n['initialPosition'] = []
             n['initialPosition'].append(0.00)
             n['initialPosition'].append(0.00)
             n['initialPosition'].append(0.00)
@@ -98,7 +98,7 @@ if __name__ == '__main__':
                 uri = "radio://0/{}/2M/E7E7E7E7{}".format(crazyflie["channel"], id)
                 cfType = crazyflie["type"]
                 bigQuad = cfTypes[cfType]["bigQuad"]
-                
+
                 try:
                     if not bigQuad:
                         voltage = subprocess.check_output(["rosrun crazyflie_tools battery --uri " + uri], shell=True)
