@@ -5,7 +5,7 @@ import pycrazyswarm as pcs
 import numpy as np
 
 Z = 0.6
-yamlpath ="/home/dronelab/DRONELAB/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
+yamlpath ="/home/orca/dvic/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
 class TAKEOFF(smach.State):
     def __init__(self):
         smach.State.__init__(self, outcomes=['succeeded','preempted','aborted'])
