@@ -33,8 +33,12 @@ def on_press(key):
 
         if(key == keyboard.Key.down):
             print("DOWN")
-        if(key == keyboard.Key.down):
-            print("DOWN")
+        if(key == keyboard.Key.ctrl_r):
+            print("right ctrl")
+        if(key== keyboard.Key.ctrl_l):
+            print("Left ctrl")
+        if(key== keyboard.Key.alt_l):
+            print("Left alt")
 
 
 listener = keyboard.Listener(

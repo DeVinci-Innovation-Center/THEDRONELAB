@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.ERROR)
 from pynput import keyboard
 
 Land=False
-URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
+URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E704')
 vector=np.array([0.0,0.0,0.0])
 
 def on_press(key):
@@ -25,22 +25,13 @@ def on_press(key):
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))  
-        if(key.char=='t'):
-            print("TOP")
-            vector[0]=0
-            vector[1]=0
-            vector[2]=travel
-        if(key.char=='g'):
-            print("BELOW")
-            vector[0]=0
-            vector[1]=0
-            vector[2]=-travel
+        
     except AttributeError :
         print('special key {0} pressed'.format(
             key))
         if(key == keyboard.Key.space):
             mc.move_distance(0.0,0.0,-0.3)
-            mc.land
+            # mc.land
             Land=True
             print("LANDING  ")          
         if(key == keyboard.Key.right):
@@ -63,6 +54,16 @@ def on_press(key):
             vector[0]=0
             vector[1]=-travel
             vector[2]=0
+        if(key == keyboard.Key.shift):
+            print("TOP")
+            vector[0]=0
+            vector[1]=0
+            vector[2]=travel
+        if(key == keyboard.Key.ctrl_l):
+            print("BELOW")
+            vector[0]=0
+            vector[1]=0
+            vector[2]=-travel
 
         mc.start_linear_motion(vector[0],vector[1],vector[2])
         # vector=np.array([0.0,0.0,0.0])

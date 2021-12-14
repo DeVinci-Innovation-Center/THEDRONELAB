@@ -17,28 +17,18 @@ from pynput import keyboard
 
 
 Land=False
-URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
+URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E701')
 vector=np.array([0.0,0.0,0.0])
 
 def on_press(key):
     global Land
     global vector
+    global mode
+    global rest
     travel = 0.3  
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))
-        if(mode==2):
-
-            if(key.char=='t'):
-                print("TOP")
-                vector[0]= 0
-                vector[1]=0
-                vector[2]=travel
-            if(key.char=='g'):
-                print("BELOW")
-                vector[0]=0   
-                vector[1]=0
-                vector[2]=-travel
         if(key.char=='h'): #home
             print("HOME MODE")
             Land=True
@@ -46,11 +36,17 @@ def on_press(key):
 
         if(key.char=='m'): #manual
             print("MANUAL MODE")
+            pc.go_to(0,0,0.4)
             mode=2
             #pc.start_linear_motion(vector[0],vector[1],vector[2])
         if(key.char=='a'): #auto
             print("AUTO MODE")
+            pc.go_to(0,0,0.4)
             mode=1
+        if(key.char=='r'): #home
+            print("RESET")
+            rest=True
+            mode=3
     except AttributeError:
         print('special key {0} pressed'.format(
             key))
@@ -75,11 +71,22 @@ def on_press(key):
                 vector[0]=0
                 vector[1]= -travel
                 vector[2]=0
+            if(key == keyboard.Key.shift):
+                print("TOP")
+                vector[1]=0
+                vector[2]=travel
+            if(key == keyboard.Key.ctrl):
+                print("BELOW")
+                vector[0]=0
+                vector[1]=0
+                vector[2]=-travel
 
         # vector=np.array([0.0,0.0,0.0])
         
 if __name__ == '__main__':
     global mode
+    global rest
+    rest=False
     mode =1
     
     cflib.crtp.init_drivers() 
@@ -101,13 +108,20 @@ if __name__ == '__main__':
             print("TAKE OFF")
             start=time.time()
             time.sleep(1)
+            global list
             list=[[0,0,0.4],[0.3,0,0],[0,0.3,0],[-0.3,0,0],[0,-0.3,0],[0,0,-0.4],[0.3,0,0],[0,0.3,0],[-0.3,0,0],[0,-0.3,0]]
             i=0
-            while(time.time()-start<15):
-                if(mode==1&i<9):
+            while(time.time()-start<20):
+                
+                if(mode==1 and i<=9):
                     pc.move_distance(list[i][0],list[i][1],list[i][2])
-                    print(list[i])
                     i=i+1
+                    print("I:"+str(i))
+                    rest=False
+                if(rest and i>9):
+                    print("I:"+str(i))
+                    i=0
+
 
                 if(mode==2):
                     pc.move_distance(vector[0],vector[1],vector[2])
@@ -118,60 +132,5 @@ if __name__ == '__main__':
                 
                 if(int(time.time()-start)!=a):
                     print(time.time()-start) 
-                    a=int(time.time()-start  ) 
-                if(Land):
-                    break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    
-
-    listener = keyboard.Listener(
-    on_press=on_press)
-    listener.start()
-
-    start=time.time()
-    time.sleep(1)
-    URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
-    vector=np.array([0.0,0.0,0.0])
-    cflib.crtp.init_drivers() 
-    with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
-        # We take off when the commander is created
-        
-        a=0 
-        time.sleep(1)
-        print("COMMING") 
-        with PositionHlCommander(scf) as pc:
-            print("STARTING")
-            pc.forward(0.3)
-            pc.left(0.3)
-            pc.back(0.3)
-            pc.right(0.3)
-            pc.circle_right(0.4, velocity=0.5, angle_degrees=180)
-            time.sleep(1)
-            pc.land()
-            while(time.time()-start<20):  
-                time.sleep(1)
-    
-    
-                
-
+                    a=int(time.time()-start  )
+                    print(str(time.time()-start)+"mode -"+ str(mode) +"-") 
