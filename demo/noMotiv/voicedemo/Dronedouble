@@ -1,0 +1,168 @@
+#from os import W_OK
+import speech_recognition as sr
+import time
+from playsound import playsound
+from ssl import ALERT_DESCRIPTION_INTERNAL_ERROR
+from sys import dont_write_bytecode
+from cflib import crazyflie
+import speech_recognition as sr
+import logging
+import time
+
+import cflib.crtp
+from cflib.crazyflie import Crazyflie
+from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
+from cflib.utils import uri_helper
+
+from cflib.crazyflie.log import LogConfig
+from cflib.crazyflie.syncLogger import SyncLogger
+from cflib.positioning.motion_commander import MotionCommander
+from cflib.crazyflie import Commander
+
+def speech(source):   
+    try :
+        print("Speak Anything :")
+        r=sr.Recognizer()
+        audio = r.listen(source, phrase_time_limit=4)   
+        text = r.recognize_google(audio, language="fr-FR")
+        # print("You said : {}".format(text))
+        return text
+    except :
+        # print("FAIL")
+        return ""
+
+
+def first(start):
+    URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E701')
+    with sr.Microphone() as source:
+        cflib.crtp.init_drivers() 
+        with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:       
+                while(time.time()-start<60):
+                    speech(source)
+                    if(takeOff):
+                        takeOff=False
+                        with MotionCommander(scf,default_height=0.3) as mc:
+                            while(time.time()-start<60):
+                                time.sleep(1)
+                                print(time.time()-start)
+                                speech(source)
+                                if(droite):
+                                    mc.right(distance_m=0.4,velocity=0.2)
+                                    droite = False
+                                if(gauche):
+                                    mc.left(distance_m=0.4,velocity=0.2)
+                                    gauche = False
+                                if(avant):
+                                    mc.forward(distance_m=0.4,velocity=0.2)
+                                    avant = False
+                                if(arriere):
+                                    mc.back(distance_m=0.4,velocity=0.2)
+                                    arriere = False
+                                if(land):
+                                    mc.land(velocity=0.3)
+                                    land=False
+                                if(takeOff):
+                                    mc.take_off(velocity=0.2)
+                                    takeOff=False
+                                if(cercle):
+                                    mc.circle_left(radius_m=0.4,velocity=0.4,angle_degrees=360)
+                                    cercle=False
+                                if(monter):
+                                    mc.up(distance_m=0.3,velocity=0.2)
+                                    monter=False
+                                if(descendre):
+                                    mc.down(distance_m=0.3,velocity=0.2)
+                                    descendre=False
+                                if(danse):
+                                    mc.left(0.3,velocity=0.6)
+                                    mc.forward(0.3,velocity=0.6)
+                                    mc.right(0.3,velocity=0.6)
+                                    mc.back(0.3,velocity=0.6)
+                                    mc.up(0.3,velocity=0.6)
+                                    mc.right(0.3,velocity=0.6)
+                                    danse =False
+                                    
+                                    
+
+                            mc.stop()
+
+def sec(start):
+    URI2 = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
+    with sr.Microphone() as source:
+        cflib.crtp.init_drivers() 
+        with SyncCrazyflie(URI2, cf=Crazyflie(rw_cache='./cache')) as scf:       
+                while(time.time()-start<60):
+                    speech(source)
+                    if(takeOff):
+                        takeOff=False
+                        with MotionCommander(scf,default_height=0.3) as mc:
+                            while(time.time()-start<60):
+                                time.sleep(1)
+                                print(time.time()-start)
+                                speech(source)
+                                if(droite):
+                                    mc.right(distance_m=0.4,velocity=0.2)
+                                    droite = False
+                                if(gauche):
+                                    mc.left(distance_m=0.4,velocity=0.2)
+                                    gauche = False
+                                if(avant):
+                                    mc.forward(distance_m=0.4,velocity=0.2)
+                                    avant = False
+                                if(arriere):
+                                    mc.back(distance_m=0.4,velocity=0.2)
+                                    arriere = False
+                                if(land):
+                                    mc.land(velocity=0.3)
+                                    land=False
+                                if(takeOff):
+                                    mc.take_off(velocity=0.2)
+                                    takeOff=False
+                                if(cercle):
+                                    mc.circle_left(radius_m=0.4,velocity=0.4,angle_degrees=360)
+                                    cercle=False
+                                if(monter):
+                                    mc.up(distance_m=0.3,velocity=0.2)
+                                    monter=False
+                                if(descendre):
+                                    mc.down(distance_m=0.3,velocity=0.2)
+                                    descendre=False
+                                if(danse):
+                                    mc.left(0.3,velocity=0.6)
+                                    mc.forward(0.3,velocity=0.6)
+                                    mc.right(0.3,velocity=0.6)
+                                    mc.back(0.3,velocity=0.6)
+                                    mc.up(0.3,velocity=0.6)
+                                    mc.right(0.3,velocity=0.6)
+                                    danse =False
+                                    
+                                    
+
+                            mc.stop()
+
+
+
+
+with sr.Microphone() as source:    
+    start=time.time()
+    words=""
+    while(time.time()-start<60):
+        #time.sleep(1)
+        print(time.time()-start)
+        print(words)
+        words+=" "+speech(source)
+        if("drone" in words):
+            print("COMMAND detected")
+            beginning = words.find("drone")
+            words = words[beginning::]
+            wordarr = words.split(" ")
+            if(wordarr[1]=="alpha"):
+                first()
+            if(wordarr[1]=="epsilon"):
+                sec() 
+            print(words)
+            words=""
+        if("explosion" in words):
+            words=words.replace("explosion","") 
+            playsound('/home/anne/Downloads/bruit-dexplosion.mp3')
+   

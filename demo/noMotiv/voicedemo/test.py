@@ -54,7 +54,7 @@ with sr.Microphone() as source:
             print("new token :"+droneNumber)
             if (droneNumber): 
                 if(command(wordarr[2])):
-                    #return (droneNumber+" "+command[wordarr[2]])
+                    print("good")
                 else: break
             else: break
             print(words)
