@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel/setup.sh
+    local-name: /home/orca/dvic/THEDRONELAB/ros_ws/devel/setup.sh

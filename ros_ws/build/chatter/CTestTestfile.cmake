@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/chatter
-# Build directory: /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/build/chatter
+# Source directory: /home/orca/dvic/THEDRONELAB/ros_ws/src/chatter
+# Build directory: /home/orca/dvic/THEDRONELAB/ros_ws/build/chatter
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/orca/dvic/THEDRONELAB/ros_ws/src/scanner/build/devel/setup.sh

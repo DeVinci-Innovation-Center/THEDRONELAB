@@ -67,14 +67,14 @@ set(scanner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(scanner_SOURCE_PREFIX /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/scanner)
-  set(scanner_DEVEL_PREFIX /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel)
+  set(scanner_SOURCE_PREFIX /home/orca/dvic/THEDRONELAB/ros_ws/src/scanner)
+  set(scanner_DEVEL_PREFIX /home/orca/dvic/THEDRONELAB/ros_ws/devel)
   set(scanner_INSTALL_PREFIX "")
   set(scanner_PREFIX ${scanner_DEVEL_PREFIX})
 else()
   set(scanner_SOURCE_PREFIX "")
   set(scanner_DEVEL_PREFIX "")
-  set(scanner_INSTALL_PREFIX /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/install)
+  set(scanner_INSTALL_PREFIX /home/orca/dvic/THEDRONELAB/ros_ws/install)
   set(scanner_PREFIX ${scanner_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/dronelab/DRONELAB/THEDRONELAB/ros_ws/install/lib;/home/dronelab/DRONELAB/crazyswarm/ros_ws/devel/lib;/opt/ros/noetic/lib)
+=======
+    foreach(path /home/orca/dvic/THEDRONELAB/ros_ws/install/lib;/home/orca/dvic/THEDRONELAB/ros_ws/devel/lib;/home/orca/dvic/crazyswarm/ros_ws/devel/lib;/opt/ros/noetic/lib)
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

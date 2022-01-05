@@ -10,7 +10,7 @@ project(pycrazyswarm)
 find_package(catkin REQUIRED COMPONENTS
   rospy
 )
-
+catkin_python_setup()
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -100,12 +100,12 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
+ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pycrazyswarm
 #  CATKIN_DEPENDS rospy
 #  DEPENDS system_lib
-)
+ )
 
 ###########
 ## Build ##
@@ -161,7 +161,7 @@ include_directories(
 #   pycrazyswarm/__init__.py
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-catkin_python_setup()
+
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
