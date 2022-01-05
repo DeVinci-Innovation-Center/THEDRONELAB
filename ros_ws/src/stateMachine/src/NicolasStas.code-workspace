@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/devel/lib/python3/dist-packages",
+			"/home/dronelab/DRONELAB/crazyswarm/ros_ws/devel/lib/python3/dist-packages",
+			"/opt/ros/noetic/lib/python3/dist-packages"
+		]
+	}
+}

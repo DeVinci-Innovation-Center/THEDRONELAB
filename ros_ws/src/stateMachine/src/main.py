@@ -32,7 +32,7 @@ def main():
     # rp.init_node("smach_state_machine")
     # Create a SMACH state machine
     sm = smach.StateMachine(outcomes=['FINISHED', 'ENDED'])
-    sm.userdata.id = 2
+    sm.userdata.id = 5
     sm.userdata.csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
     sm.userdata.csvpathV = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
     sm.userdata.csvpathI = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/I.csv"

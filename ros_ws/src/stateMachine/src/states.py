@@ -24,6 +24,7 @@ class TAKEOFF(smach.State):
                 cf.takeoff(targetHeight=Z, duration=1.0+Z)
                 self.timeHelper.sleep(Z)
                 time.sleep(3)
+            time.sleep(5)
         return 'succeeded'
 
 class LAND(smach.State):
