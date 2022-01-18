@@ -6,7 +6,8 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("chatter")
+subdirs("cpp")
+subdirs("decenter")
 subdirs("listener")
-subdirs("pycrazyswarm")
 subdirs("scanner")
 subdirs("stateMachine")

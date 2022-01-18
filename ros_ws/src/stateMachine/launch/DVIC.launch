@@ -1,9 +1,9 @@
 <launch>
     <param name="csv_path" value="/home/orca/dvic/THEDRONELAB"/>
     <param name="crazyflies_yaml_path" value="/home/orca/dvic/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"/>
-    <!-- <node name="drone1" pkg="stateMachine" type="main.py" output="screen">
+    <node name="drone1" pkg="stateMachine" type="main.py" output="screen">
         <param name="dn" value="1"/>
         <param name="mr" value="2"/>
         <param name="csvs" value="DVIC"/>
-    </node> -->
+    </node>
 </launch>

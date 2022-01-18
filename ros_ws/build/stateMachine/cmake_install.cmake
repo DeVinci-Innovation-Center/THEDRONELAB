@@ -61,10 +61,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/stateMachine" TYPE PROGRAM FILES "/home/orca/dvic/THEDRONELAB/ros_ws/build/stateMachine/catkin_generated/installspace/states.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/stateMachine" TYPE FILE FILES "/home/orca/dvic/THEDRONELAB/ros_ws/src/stateMachine/launch/DVIC.launch")
 endif()
 

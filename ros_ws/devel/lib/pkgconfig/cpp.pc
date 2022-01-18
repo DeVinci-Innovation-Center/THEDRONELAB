@@ -1,0 +1,8 @@
+prefix=/home/orca/dvic/THEDRONELAB/ros_ws/devel
+
+Name: cpp
+Description: Description of cpp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp
