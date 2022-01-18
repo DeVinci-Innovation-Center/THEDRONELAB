@@ -44,21 +44,22 @@ with sr.Microphone() as source:
         print(time.time()-start)
         print(words)
         words+=" "+speech(source)
-        if("drone" in words):
+        if("drone " in words):
             print("COMMAND detected")
             beginning = words.find("drone")
             words = words[beginning::]
             wordarr = words.split(" ")
-            droneNumber = token(wordarr[1])
-            print("token :"+wordarr[1])
-            print("new token :"+droneNumber)
-            if (droneNumber): 
-                if(command(wordarr[2])):
-                    print("good")
+            if(wordarr[1]):
+                droneNumber = token(wordarr[1])
+                print("token :"+wordarr[1])
+                print("new token :"+droneNumber)
+                if (droneNumber): 
+                    if(command(wordarr[2])):
+                        print("good")
+                    else: break
                 else: break
-            else: break
-            print(words)
-            words=""
+                print(words)
+                words=""
         if("explosion" in words):
             words=words.replace("explosion","") 
             playsound('/home/anne/Downloads/bruit-dexplosion.mp3')

@@ -16,31 +16,41 @@ from cflib.positioning.position_hl_commander import PositionHlCommander
 from cflib.crazyflie import Commander
 logging.basicConfig(level=logging.ERROR)
 
-global takeOff
+
 takeOff = False
 vitesse = 0.1
-global droite
+
 droite = False
-global gauche
+
 gauche = False
-global avant
 avant = False
-global arriere
 arriere = False
-global land
+
 land=False
-global cercle
+
 cercle=False
-global monter
+
 monter=False
-global descendre
+
 descendre=False
-global danse
+
 danse=False
-global maison
 maison = False
 
 def speech():   
+    
+    with sr.Microphone() as source:
+        try:
+            print("Speak")
+            audio = r.listen(source, phrase_time_limit=2)   
+            text = r.recognize_google(audio, language="fr-FR")
+            print("You said : {}".format(text))
+            return text
+        except: 
+            print("fail to listen")
+            return ""
+
+def reco():
     global takeOff
     global droite
     global gauche
@@ -52,14 +62,18 @@ def speech():
     global descendre
     global danse
     global maison
-    with sr.Microphone() as source:
-        try:
-            print("Speak")
-            audio = r.listen(source, phrase_time_limit=2)   
-            text = r.recognize_google(audio, language="fr-FR")
-            print("You said : {}".format(text))
-            if (format(text)=="décollage"):
+    global words
+    if("drone " in words):
+        print("go")
+        beginning = words.find("drone")
+        words = words[beginning::]
+        arr = words.split(" ")
+        if(arr[1]):
+            text=arr[1]
+            print(text)
+            if (text=="décollage"):
                 takeOff = True
+                print("go2")
             if (format(text)=="droite"):
                 droite = True
             if (format(text)=="gauche"):
@@ -79,9 +93,9 @@ def speech():
             if (format(text)=="danse"):
                 danse = True                              
             if (format(text)=="maison"):
-                maison = True  
-        except: 
-            print("fail to listen")
+                maison = True
+            words=""            
+
 
 
 URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E701')
@@ -90,17 +104,20 @@ r = sr.Recognizer()
 
 with sr.Microphone() as source:
     cflib.crtp.init_drivers() 
-    with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
-                 
+    with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf: 
         start=time.time()
-        while(time.time()-start<67):
-            speech()
+        words=""
+        while(time.time()-start<320):
+            words+=" "+speech()
+            reco()
             if(takeOff):
+                print("gogo")
                 takeOff=False
                 with PositionHlCommander(scf,default_height=0.7) as mc:
-                    while(time.time()-start<60):
+                    while(time.time()-start<280):
                         #print(time.time()-start)
-                        speech()
+                        words+=" "+speech()
+                        reco()
                         if(droite):
                             mc.right(distance_m=0.4,velocity=0.2)
                             droite = False
@@ -141,8 +158,7 @@ with sr.Microphone() as source:
                             time.sleep(1)
                             mc.land(velocity=0.2)
                             maison=False
-                            
-                    mc.go_to(0,0,z=0.3,velocity=0.2)
-                    time.sleep(1)
-                    mc.land()
+                        
                     
+                    mc.land()
+                

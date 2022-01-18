@@ -135,7 +135,7 @@ def speech():
 
 
 URI = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E701')
-URI2 = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
+# URI2 = uri_helper.uri_from_env(default='radio://0/27/2M/E7E7E7E705')
 
 r = sr.Recognizer()
 
