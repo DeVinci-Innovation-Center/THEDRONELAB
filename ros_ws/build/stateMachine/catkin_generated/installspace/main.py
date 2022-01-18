@@ -1,16 +1,42 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+from numpy.core.numeric import True_
+import rospy as rp
+import pycrazyswarm
+=======
+from logging import error
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934
 import numpy as np
 import sys
 import rospy as rp
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
 from rospy.client import on_shutdown
 from rospy.core import signal_shutdown
 import smach
 import smach_ros
 import std_msgs
 import signal
+<<<<<<< HEAD
 import sys
 import time
 # import mystates as mystates
+=======
+<<<<<<< HEAD
+from states import *
+from pynput import keyboard
+
+from tf import listener
+
+global sm
+
+=======
+try:
+    import mystates.states as states
+except Exception:
+    import states
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934
 from pynput import keyboard
 sys.path.append("/home/dvic/crazyswarm/ros_ws/src/crazyswarm/scripts")
 # print(sys.path)
@@ -165,10 +191,20 @@ def calctime(posDrone, posTarget):
     return dist*2
 
 
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
 def signal_handler(k):
     try:
         if k.char == 'q':
             global sm
+<<<<<<< HEAD
+        print('--------------------------------')
+        print('---------PREEMPT !!!------------')
+        print('--------------------------------')
+        sm.request_preempt()
+    except AttributeError:
+        pass
+    
+=======
             print('--------------------------------')
             print('---------PREEMPT !!!------------')
             print('--------------------------------')
@@ -176,12 +212,14 @@ def signal_handler(k):
     except AttributeError:
         pass
 
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
 
 def main():
     global sm
     # rp.init_node("smach_state_machine")
     # Create a SMACH state machine
     sm = smach.StateMachine(outcomes=['FINISHED', 'ENDED'])
+<<<<<<< HEAD
     rp.init_node("dronemachine")  # ! so we can recover the params
     # print(rp.get_name())
     # k = rp.get_param_names()
@@ -200,6 +238,17 @@ def main():
         yamlpath = "/home/orca/dvic/crazyswarm/ros_ws/src/crazyswarm/launch/crazyflies.yaml"
         print(yamlpath)
     # csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
+=======
+<<<<<<< HEAD
+    sm.userdata.id = 5
+    sm.userdata.csvpath = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
+    sm.userdata.csvpathV = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/V.csv"
+    sm.userdata.csvpathI = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/I.csv"
+    sm.userdata.csvpathD = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/D.csv"
+    sm.userdata.csvpathC = "/home/dronelab/DRONELAB/THEDRONELAB/ros_ws/src/stateMachine/src/data/C.csv"
+    
+=======
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934
     try:
         sm.userdata.id = int(rp.get_param("~dn"))
     except KeyError:
@@ -233,13 +282,32 @@ def main():
         sm.userdata.points.append(f"{homedir}/ros_ws/src/stateMachine/src/data/D.csv")
         sm.userdata.points.append(f"{homedir}/ros_ws/src/stateMachine/src/data/C.csv")
 
+<<<<<<< HEAD
     rp.signal_shutdown("switching")  # ! so pycrazyswarm can create its own node
+=======
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934
     print("created state machine start init")
     # Open the container
     with sm:
         # Add states to the container
         print("adding state TAKEOFF")
+<<<<<<< HEAD
         smach.StateMachine.add("TAKEOFF", TAKEOFF(), transitions={"succeeded": "FOLLOWCSV", "aborted": "LAND", "preempted": "LAND"}, remapping={'id': 'id'})
+=======
+<<<<<<< HEAD
+        smach.StateMachine.add("TAKEOFF", TAKEOFF(),transitions = {"succeeded":"VFOLLOWCSV", "aborted":"LAND", "preempted":"LAND"}, remapping={'id':'id'})
+        print("adding state FOLLOWCSV")
+        smach.StateMachine.add("VFOLLOWCSV", FOLLOWCSV(),transitions = {"succeeded":"VFOLLOWCSV", "aborted":"HOME", "preempted":"HOME",'finished':'IFOLLOWCSV'}, remapping={'id':'id','csvpath':'csvpathV'})
+        smach.StateMachine.add("IFOLLOWCSV", FOLLOWCSV(),transitions = {"succeeded":"IFOLLOWCSV", "aborted":"HOME", "preempted":"HOME",'finished':'VFOLLOWCSV'}, remapping={'id':'id','csvpath':'csvpathI'})
+        print("adding state HOME")
+        smach.StateMachine.add("HOME", HOME(),transitions = {"succeeded":"LAND", "aborted":"LAND", "preempted":"LAND"}, remapping={'id':'id'})
+        print("adding state LAND")
+        smach.StateMachine.add("LAND", LAND(),transitions = {"succeeded":"FINISHED", "aborted":"ENDED", "preempted":"ENDED"}, remapping={'id':'id'})
+        
+=======
+        smach.StateMachine.add("TAKEOFF", states.TAKEOFF(), transitions={"succeeded": "FOLLOWCSV", "aborted": "LAND", "preempted": "LAND"}, remapping={'id': 'id'})
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934
         print("adding state CONDSTATE")
         smach.StateMachine.add("CONDSTATE", CONDSTATE(), transitions={"continu": "FOLLOWCSV", "finish": "HOME"}, remapping={'points': 'points', 'index': 'index', 'maxreps': 'maxreps'})
         print("adding csv states FOLLOWCSV")
@@ -249,10 +317,19 @@ def main():
         print("adding state LAND")
         smach.StateMachine.add("LAND", LAND(), transitions={"succeeded": "FINISHED", "aborted": "ENDED", "preempted": "ENDED"}, remapping={'id': 'id'})
 
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
     # Execute SMACH plan
     print("STARTING STATE MACHINE")
     outcome = sm.execute()
     rp.signal_shutdown(str(outcome))
+<<<<<<< HEAD
+
+if __name__ == '__main__':
+    print("starting ...")
+    kl = keyboard.Listener(on_press = signal_handler)
+    kl.start()
+    main()
+=======
 
 
 if __name__ == '__main__':
@@ -260,3 +337,4 @@ if __name__ == '__main__':
     kl = keyboard.Listener(on_press=signal_handler)
     kl.start()
     main()
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e

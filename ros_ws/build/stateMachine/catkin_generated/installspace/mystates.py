@@ -37,8 +37,14 @@ class TAKEOFF(smach.State):
                 rp.loginfo("starting takeoff")
                 print("starting takeoff")
                 cf.takeoff(targetHeight=Z, duration=1.0+Z)
+<<<<<<< HEAD:ros_ws/build/stateMachine/catkin_generated/installspace/mystates.py
                 # self.timeHelper.sleep(Z)
                 time.sleep(5)
+=======
+                self.timeHelper.sleep(Z)
+                time.sleep(3)
+            time.sleep(5)
+>>>>>>> 91edb6718f95756597dd405e93ad74f824224934:ros_ws/src/stateMachine/src/states.py
         return 'succeeded'
 
 

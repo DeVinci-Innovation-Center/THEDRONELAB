@@ -84,7 +84,11 @@ if __name__ == '__main__':
             #         heer.land()
             #         pos = heer.get_position()
             #         print(pos)
+<<<<<<< HEAD
+            n['initialPosition']=[]
+=======
             n['initialPosition'] = []
+>>>>>>> 5085894d031e7056fccd4fdd06b2ae0a1d14e09e
             n['initialPosition'].append(0.00)
             n['initialPosition'].append(0.00)
             n['initialPosition'].append(0.00)
