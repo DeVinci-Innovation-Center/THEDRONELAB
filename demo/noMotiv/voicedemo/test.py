@@ -7,6 +7,7 @@ def speech(source):
         # print("Speak Anything :")
         audio = r.listen(source, phrase_time_limit=4)   
         text = r.recognize_google(audio, language="fr-FR")
+        
         # print("You said : {}".format(text))
         return text
     except :
@@ -49,17 +50,17 @@ with sr.Microphone() as source:
             beginning = words.find("drone")
             words = words[beginning::]
             wordarr = words.split(" ")
-            if(wordarr[1]):
-                droneNumber = token(wordarr[1])
-                print("token :"+wordarr[1])
-                print("new token :"+droneNumber)
-                if (droneNumber): 
-                    if(command(wordarr[2])):
-                        print("good")
-                    else: break
-                else: break
-                print(words)
-                words=""
+            # if(wordarr[1]):
+            #     droneNumber = token(wordarr[1])
+            #     print("token :"+wordarr[1])
+            #     print("new token :"+droneNumber)
+            #     if (droneNumber): 
+            #         if(command(wordarr[2])):
+            #             print("good")
+            #         else: break
+            #     else: break
+            #     print(words)
+            #     words=""
         if("explosion" in words):
             words=words.replace("explosion","") 
             playsound('/home/anne/Downloads/bruit-dexplosion.mp3')
