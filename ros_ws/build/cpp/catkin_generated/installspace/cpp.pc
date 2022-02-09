@@ -1,0 +1,8 @@
+prefix=/home/orca/dvic/THEDRONELAB/ros_ws/install
+
+Name: cpp
+Description: Description of cpp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp

@@ -1,0 +1,8 @@
+prefix=/home/orca/dvic/THEDRONELAB/ros_ws/devel
+
+Name: decenter
+Description: Description of decenter
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

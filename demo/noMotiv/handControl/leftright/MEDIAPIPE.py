@@ -5,6 +5,9 @@
 # Then find how to trace position accurately.
 
 # x and y given as array_like objects
+
+#!/usr/bin/env python
+
 import dash
 from dash import dcc
 #import dash_core_components as dcc

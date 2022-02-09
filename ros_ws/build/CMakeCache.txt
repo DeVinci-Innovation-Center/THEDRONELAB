@@ -392,6 +392,45 @@ chatter_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/chatter
 chatter_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/chatter
 
 //Value Computed by CMake
+chattercpp_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/chattercpp
+
+//Value Computed by CMake
+chattercpp_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/chattercpp
+
+//Value Computed by CMake
+cpp_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/cpp
+
+//Value Computed by CMake
+cpp_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/cpp
+
+//The directory containing a CMake configuration file for cpp_common.
+cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
+
+//Value Computed by CMake
+decenter_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/decenter
+
+//Value Computed by CMake
+decenter_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/decenter
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for geneus.
+geneus_DIR:PATH=/opt/ros/noetic/share/geneus/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/noetic/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/noetic/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for gennodejs.
+gennodejs_DIR:PATH=/opt/ros/noetic/share/gennodejs/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/noetic/share/genpy/cmake
+
+//Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/gtest/googlemock
 
 //Dependencies for the target
@@ -437,11 +476,17 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//Path to a library.
+lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+
 //Value Computed by CMake
 listener_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/listener
 
 //Value Computed by CMake
 listener_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/listener
+
+//The directory containing a CMake configuration file for message_runtime.
+message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
 pycrazyswarm_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/pycrazyswarm
@@ -452,8 +497,26 @@ pycrazyswarm_DIR:PATH=/home/orca/dvic/THEDRONELAB/ros_ws/devel/share/pycrazyswar
 //Value Computed by CMake
 pycrazyswarm_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/pycrazyswarm
 
+//The directory containing a CMake configuration file for rosconsole.
+rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for roscpp.
+roscpp_DIR:PATH=/opt/ros/noetic/share/roscpp/cmake
+
+//The directory containing a CMake configuration file for roscpp_serialization.
+roscpp_serialization_DIR:PATH=/opt/ros/noetic/share/roscpp_serialization/cmake
+
+//The directory containing a CMake configuration file for roscpp_traits.
+roscpp_traits_DIR:PATH=/opt/ros/noetic/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for rosgraph_msgs.
+rosgraph_msgs_DIR:PATH=/opt/ros/noetic/share/rosgraph_msgs/cmake
+
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rostime.
+rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
 //Value Computed by CMake
 scanner_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/scanner
@@ -466,6 +529,12 @@ stateMachine_BINARY_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/build/stateMac
 
 //Value Computed by CMake
 stateMachine_SOURCE_DIR:STATIC=/home/orca/dvic/THEDRONELAB/ros_ws/src/stateMachine
+
+//The directory containing a CMake configuration file for std_msgs.
+std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for xmlrpcpp.
+xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
 
 ########################
@@ -615,7 +684,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

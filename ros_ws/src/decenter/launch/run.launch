@@ -1,0 +1,5 @@
+<launch>
+    <node name="cf1" pkg="decenter" type="exemple3.py">
+        <param name="cfid" value="1"/>
+    </node>
+</launch>
