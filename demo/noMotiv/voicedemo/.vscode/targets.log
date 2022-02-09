@@ -1,0 +1,1319 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Nov 24 19:27:40 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo
+# makefile (from 'Makefile', line 39)
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 45)
+RM = /usr/bin/cmake -E remove -f
+# environment
+SNAP_DATA = /var/snap/code/82
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:47771
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 54)
+CMAKE_BINARY_DIR = /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+USERNAME = anne
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+ROS_ETC_DIR = /opt/ros/noetic/etc/ros
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+_ = /snap/code/82/usr/share/code/code
+# environment
+ROS_PACKAGE_PATH = /opt/ros/noetic/share
+# environment
+MANAGERPID = 1417
+# environment
+ROS_PYTHON_VERSION = 3
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = fr_FR.UTF-8
+# environment
+VSCODE_CWD = /home/anne
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/82/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/anne/.local/bin:/opt/ros/noetic/bin:/home/anne/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/anne-Inspiron-5482:@/tmp/.ICE-unix/1646,unix/anne-Inspiron-5482:/tmp/.ICE-unix/1646
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/anne/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/82
+# environment
+ROS_ROOT = /opt/ros/noetic/share/ros
+# environment
+SNAP_VERSION = ccbaa2d2
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=eab6a069-89dd-4290-a4b2-28fcd33ff4dc&iid=eab6a069-89dd-4290-a4b2-28fcd33ff4dc&sid=eab6a069-89dd-4290-a4b2-28fcd33ff4dc","uploadToServer":true}
+# environment
+INVOCATION_ID = 77932753640e4e97ad6ea598b6b966ff
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/82/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+CMAKE_PREFIX_PATH = /opt/ros/noetic
+# environment
+LS_COLORS = 
+# environment
+ROS_DISTRO = noetic
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6245
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 1602
+# environment
+PKG_CONFIG_PATH = /opt/ros/noetic/lib/pkgconfig
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/anne
+# environment
+LD_LIBRARY_PATH = /opt/ros/noetic/lib
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/anne/.config/Code/CachedData/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
+# environment
+LOGNAME = anne
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from 'Makefile', line 48)
+EQUALS = =
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = CjDVyPaz6nki7b0kSV6OekbPihwdivM3EG6CvwdQrz6EIzEzvBp1
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/anne/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+LC_TIME = fr_FR.UTF-8
+# environment
+SNAP_REAL_HOME = /home/anne
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SNAP_USER_DATA = /home/anne/snap/code/82
+# environment
+SHLVL = 0
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e1e97752-7c87-4aec-8095-d042bec6eeb7.sock
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = anne
+# environment
+SNAP_REVISION = 82
+# environment
+LC_MONETARY = fr_FR.UTF-8
+# makefile
+.DEFAULT_GOAL := default_target
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from 'Makefile', line 51)
+CMAKE_SOURCE_DIR = /home/anne/Downloads/pa_stable_v190700_20210406/portaudio
+# environment
+ROSLISP_PACKAGE_DIRECTORIES = 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = fr_FR.UTF-8
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-2526bc86-1.62.3-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+PYTHONPATH = /opt/ros/noetic/lib/python3/dist-packages
+# makefile
+MAKEFLAGS = pqrRs
+# environment
+MFLAGS = -pqrRs
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/anne/.config/Code/exthost Crash Reports
+# environment
+ROS_VERSION = 1
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = fr_FR.UTF-8
+# environment
+LC_IDENTIFICATION = fr_FR.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = CjDVyPaz6nki7b0kSV6OekbPihwdivM3EG6CvwdQrz6EIzEzvBp1
+# environment
+LC_NUMERIC = fr_FR.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LC_MEASUREMENT = fr_FR.UTF-8
+# environment
+ROS_MASTER_URI = http://localhost:11311
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# makefile (from 'Makefile', line 42)
+CMAKE_COMMAND = /usr/bin/cmake
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 21)
+SUFFIXES = 
+# environment
+SNAP_REEXEC = 
+ 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = fr_FR.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 6292
+# variable set hash-table stats:
+# Load=148/1024=14%, Rehash=0, Collisions=27/182=15%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 66309, inode 1989760): 18 files, no impossibilities.
+
+# 18 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.hpux_make_needs_suffix_list:
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+cmake_force:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_debugprint.i: src/common/pa_debugprint.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+list_install_components:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 97):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+
+src/common/pa_debugprint.o: src/common/pa_debugprint.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/os/unix/pa_unix_util.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 614):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_util.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_util.c.s
+
+install/local: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 73):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+
+edit_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 118):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+
+src/os/unix/pa_unix_hostapis.i: src/os/unix/pa_unix_hostapis.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/os/unix/pa_unix_hostapis.o: src/os/unix/pa_unix_hostapis.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_trace.i: src/common/pa_trace.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_trace.o: src/common/pa_trace.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+all: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 129):
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles 0
+
+src/common/pa_front.i: src/common/pa_front.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: default_target cmake_force install/strip install/strip/fast install/local install/local/fast install install/fast list_install_components list_install_components/fast rebuild_cache rebuild_cache/fast edit_cache edit_cache/fast all clean clean/fast preinstall preinstall/fast depend uninstall uninstall/fast portaudio_static portaudio_static/fast portaudio portaudio/fast src/common/pa_allocation.o src/common/pa_allocation.c.o src/common/pa_allocation.i src/common/pa_allocation.c.i src/common/pa_allocation.s src/common/pa_allocation.c.s src/common/pa_converters.o src/common/pa_converters.c.o src/common/pa_converters.i src/common/pa_converters.c.i src/common/pa_converters.s src/common/pa_converters.c.s src/common/pa_cpuload.o src/common/pa_cpuload.c.o src/common/pa_cpuload.i src/common/pa_cpuload.c.i src/common/pa_cpuload.s src/common/pa_cpuload.c.s src/common/pa_debugprint.o src/common/pa_debugprint.c.o src/common/pa_debugprint.i src/common/pa_debugprint.c.i src/common/pa_debugprint.s src/common/pa_debugprint.c.s src/common/pa_dither.o src/common/pa_dither.c.o src/common/pa_dither.i src/common/pa_dither.c.i src/common/pa_dither.s src/common/pa_dither.c.s src/common/pa_front.o src/common/pa_front.c.o src/common/pa_front.i src/common/pa_front.c.i src/common/pa_front.s src/common/pa_front.c.s src/common/pa_process.o src/common/pa_process.c.o src/common/pa_process.i src/common/pa_process.c.i src/common/pa_process.s src/common/pa_process.c.s src/common/pa_ringbuffer.o src/common/pa_ringbuffer.c.o src/common/pa_ringbuffer.i src/common/pa_ringbuffer.c.i src/common/pa_ringbuffer.s src/common/pa_ringbuffer.c.s src/common/pa_stream.o src/common/pa_stream.c.o src/common/pa_stream.i src/common/pa_stream.c.i src/common/pa_stream.s src/common/pa_stream.c.s src/common/pa_trace.o src/common/pa_trace.c.o src/common/pa_trace.i src/common/pa_trace.c.i src/common/pa_trace.s src/common/pa_trace.c.s src/hostapi/alsa/pa_linux_alsa.o src/hostapi/alsa/pa_linux_alsa.c.o src/hostapi/alsa/pa_linux_alsa.i src/hostapi/alsa/pa_linux_alsa.c.i src/hostapi/alsa/pa_linux_alsa.s src/hostapi/alsa/pa_linux_alsa.c.s src/hostapi/skeleton/pa_hostapi_skeleton.o src/hostapi/skeleton/pa_hostapi_skeleton.c.o src/hostapi/skeleton/pa_hostapi_skeleton.i src/hostapi/skeleton/pa_hostapi_skeleton.c.i src/hostapi/skeleton/pa_hostapi_skeleton.s src/hostapi/skeleton/pa_hostapi_skeleton.c.s src/os/unix/pa_unix_hostapis.o src/os/unix/pa_unix_hostapis.c.o src/os/unix/pa_unix_hostapis.i src/os/unix/pa_unix_hostapis.c.i src/os/unix/pa_unix_hostapis.s src/os/unix/pa_unix_hostapis.c.s src/os/unix/pa_unix_util.o src/os/unix/pa_unix_util.c.o src/os/unix/pa_unix_util.i src/os/unix/pa_unix_util.c.i src/os/unix/pa_unix_util.s src/os/unix/pa_unix_util.c.s help cmake_check_build_system
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/common/pa_front.o: src/common/pa_front.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_cpuload.i: src/common/pa_cpuload.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_cpuload.o: src/common/pa_cpuload.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+uninstall/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 169):
+	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
+
+src/common/pa_stream.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 454):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_stream.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_stream.c.i
+
+preinstall/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 151):
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+
+src/common/pa_stream.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 444):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_stream.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_stream.c.o
+
+src/common/pa_converters.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 254):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_converters.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_converters.c.s
+
+src/common/pa_allocation.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 214):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_allocation.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_allocation.c.i
+
+src/common/pa_allocation.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 204):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_allocation.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_allocation.c.o
+
+src/common/pa_dither.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 334):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_dither.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_dither.c.i
+
+src/common/pa_allocation.s: src/common/pa_allocation.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+portaudio_static/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 182):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/build
+
+src/common/pa_dither.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 324):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_dither.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_dither.c.o
+
+src/common/pa_dither.s: src/common/pa_dither.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/hostapi/skeleton/pa_hostapi_skeleton.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 544):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.i
+
+src/hostapi/skeleton/pa_hostapi_skeleton.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 534):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.o
+
+src/hostapi/skeleton/pa_hostapi_skeleton.s: src/hostapi/skeleton/pa_hostapi_skeleton.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_process.i: src/common/pa_process.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_process.o: src/common/pa_process.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.SUFFIXES: .hpux_make_needs_suffix_list
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+uninstall: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 164):
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+
+src/hostapi/alsa/pa_linux_alsa.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 524):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/alsa/pa_linux_alsa.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/alsa/pa_linux_alsa.c.s
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-24 15:28:31.134392463
+#  File has been updated.
+#  Successfully updated.
+
+src/common/pa_ringbuffer.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 424):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_ringbuffer.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_ringbuffer.c.i
+
+src/common/pa_ringbuffer.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 414):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_ringbuffer.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_ringbuffer.c.o
+
+src/common/pa_stream.s: src/common/pa_stream.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_ringbuffer.s: src/common/pa_ringbuffer.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/os/unix/pa_unix_util.i: src/os/unix/pa_unix_util.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/os/unix/pa_unix_util.o: src/os/unix/pa_unix_util.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.NOTPARALLEL:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean/fast: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_debugprint.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 304):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_debugprint.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_debugprint.c.i
+
+src/common/pa_debugprint.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 294):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_debugprint.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_debugprint.c.o
+
+src/common/pa_debugprint.s: src/common/pa_debugprint.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+install/strip/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 67):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+
+portaudio: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 190):
+	$(MAKE) -f CMakeFiles/Makefile2 portaudio
+
+cmake_check_build_system:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := cmake_check_build_system
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/14=21%
+#  recipe to execute (from 'Makefile', line 686):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+
+src/os/unix/pa_unix_hostapis.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 574):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_hostapis.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_hostapis.c.i
+
+src/os/unix/pa_unix_hostapis.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 564):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_hostapis.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_hostapis.c.o
+
+src/os/unix/pa_unix_hostapis.s: src/os/unix/pa_unix_hostapis.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_trace.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 484):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_trace.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_trace.c.i
+
+src/common/pa_trace.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 474):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_trace.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_trace.c.o
+
+src/common/pa_trace.s: src/common/pa_trace.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_converters.i: src/common/pa_converters.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_converters.o: src/common/pa_converters.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+preinstall: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 146):
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+
+src/common/pa_front.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 354):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_front.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_front.c.o
+
+src/common/pa_front.s: src/common/pa_front.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+portaudio_static: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 177):
+	$(MAKE) -f CMakeFiles/Makefile2 portaudio_static
+
+src/common/pa_cpuload.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 274):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_cpuload.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_cpuload.c.i
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 620):
+	@echo "The following are some of the valid targets for this Makefile:"
+	@echo "... all (the default if no target is provided)"
+	@echo "... clean"
+	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... uninstall"
+	@echo "... portaudio_static"
+	@echo "... edit_cache"
+	@echo "... portaudio"
+	@echo "... src/common/pa_allocation.o"
+	@echo "... src/common/pa_allocation.i"
+	@echo "... src/common/pa_allocation.s"
+	@echo "... src/common/pa_converters.o"
+	@echo "... src/common/pa_converters.i"
+	@echo "... src/common/pa_converters.s"
+	@echo "... src/common/pa_cpuload.o"
+	@echo "... src/common/pa_cpuload.i"
+	@echo "... src/common/pa_cpuload.s"
+	@echo "... src/common/pa_debugprint.o"
+	@echo "... src/common/pa_debugprint.i"
+	@echo "... src/common/pa_debugprint.s"
+	@echo "... src/common/pa_dither.o"
+	@echo "... src/common/pa_dither.i"
+	@echo "... src/common/pa_dither.s"
+	@echo "... src/common/pa_front.o"
+	@echo "... src/common/pa_front.i"
+	@echo "... src/common/pa_front.s"
+	@echo "... src/common/pa_process.o"
+	@echo "... src/common/pa_process.i"
+	@echo "... src/common/pa_process.s"
+	@echo "... src/common/pa_ringbuffer.o"
+	@echo "... src/common/pa_ringbuffer.i"
+	@echo "... src/common/pa_ringbuffer.s"
+	@echo "... src/common/pa_stream.o"
+	@echo "... src/common/pa_stream.i"
+	@echo "... src/common/pa_stream.s"
+	@echo "... src/common/pa_trace.o"
+	@echo "... src/common/pa_trace.i"
+	@echo "... src/common/pa_trace.s"
+	@echo "... src/hostapi/alsa/pa_linux_alsa.o"
+	@echo "... src/hostapi/alsa/pa_linux_alsa.i"
+	@echo "... src/hostapi/alsa/pa_linux_alsa.s"
+	@echo "... src/hostapi/skeleton/pa_hostapi_skeleton.o"
+	@echo "... src/hostapi/skeleton/pa_hostapi_skeleton.i"
+	@echo "... src/hostapi/skeleton/pa_hostapi_skeleton.s"
+	@echo "... src/os/unix/pa_unix_hostapis.o"
+	@echo "... src/os/unix/pa_unix_hostapis.i"
+	@echo "... src/os/unix/pa_unix_hostapis.s"
+	@echo "... src/os/unix/pa_unix_util.o"
+	@echo "... src/os/unix/pa_unix_util.i"
+	@echo "... src/os/unix/pa_unix_util.s"
+
+src/common/pa_cpuload.c.o:
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 264):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_cpuload.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_cpuload.c.o
+
+src/common/pa_cpuload.s: src/common/pa_cpuload.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+depend:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 156):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+
+src/hostapi/alsa/pa_linux_alsa.i: src/hostapi/alsa/pa_linux_alsa.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/hostapi/alsa/pa_linux_alsa.o: src/hostapi/alsa/pa_linux_alsa.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_stream.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 464):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_stream.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_stream.c.s
+
+src/common/pa_allocation.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 224):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_allocation.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_allocation.c.s
+
+src/common/pa_dither.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 344):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_dither.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_dither.c.s
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+default_target: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/hostapi/skeleton/pa_hostapi_skeleton.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 554):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/skeleton/pa_hostapi_skeleton.c.s
+
+src/common/pa_process.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 394):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_process.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_process.c.i
+
+src/common/pa_process.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 384):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_process.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_process.c.o
+
+src/common/pa_process.s: src/common/pa_process.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_ringbuffer.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 434):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_ringbuffer.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_ringbuffer.c.s
+
+src/os/unix/pa_unix_util.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 604):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_util.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_util.c.i
+
+src/os/unix/pa_unix_util.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 594):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_util.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_util.c.o
+
+src/os/unix/pa_unix_util.s: src/os/unix/pa_unix_util.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 136):
+	$(MAKE) -f CMakeFiles/Makefile2 clean
+
+install/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 91):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+
+rebuild_cache/fast: rebuild_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+
+portaudio/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 195):
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/build
+
+install/strip: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 61):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+
+list_install_components/fast: list_install_components
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+edit_cache/fast: edit_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+install/local/fast: preinstall/fast
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 79):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+
+src/common/pa_debugprint.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 314):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_debugprint.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_debugprint.c.s
+
+src/common/pa_front.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 364):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_front.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_front.c.i
+
+src/os/unix/pa_unix_hostapis.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 584):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/os/unix/pa_unix_hostapis.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/os/unix/pa_unix_hostapis.c.s
+
+src/common/pa_trace.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 494):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_trace.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_trace.c.s
+
+src/common/pa_converters.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 244):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_converters.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_converters.c.i
+
+src/common/pa_stream.i: src/common/pa_stream.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_converters.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 234):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_converters.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_converters.c.o
+
+src/common/pa_stream.o: src/common/pa_stream.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_converters.s: src/common/pa_converters.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_allocation.i: src/common/pa_allocation.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_allocation.o: src/common/pa_allocation.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_dither.i: src/common/pa_dither.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_dither.o: src/common/pa_dither.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_front.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 374):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_front.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_front.c.s
+
+# Not a target:
+.hpux_make_needs_suffix_list:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/common/pa_cpuload.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 284):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_cpuload.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_cpuload.c.s
+
+src/hostapi/skeleton/pa_hostapi_skeleton.i: src/hostapi/skeleton/pa_hostapi_skeleton.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/hostapi/skeleton/pa_hostapi_skeleton.o: src/hostapi/skeleton/pa_hostapi_skeleton.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/hostapi/alsa/pa_linux_alsa.c.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 514):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/alsa/pa_linux_alsa.c.i
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/alsa/pa_linux_alsa.c.i
+
+src/hostapi/alsa/pa_linux_alsa.c.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 504):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/hostapi/alsa/pa_linux_alsa.c.o
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/hostapi/alsa/pa_linux_alsa.c.o
+
+src/hostapi/alsa/pa_linux_alsa.s: src/hostapi/alsa/pa_linux_alsa.c.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_ringbuffer.i: src/common/pa_ringbuffer.c.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_ringbuffer.o: src/common/pa_ringbuffer.c.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/common/pa_process.c.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 404):
+	$(MAKE) -f CMakeFiles/portaudio_static.dir/build.make CMakeFiles/portaudio_static.dir/src/common/pa_process.c.s
+	$(MAKE) -f CMakeFiles/portaudio.dir/build.make CMakeFiles/portaudio.dir/src/common/pa_process.c.s
+
+install: preinstall
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 85):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+
+rebuild_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 107):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+
+# files hash-table stats:
+# Load=119/1024=12%, Rehash=0, Collisions=19/460=4%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 139 / storage = 3115 B / avg = 22 B
+# current buf: size = 8162 B / used = 3115 B / count = 139 / avg = 22 B
+
+# strcache performance: lookups = 656 / hit rate = 78%
+# hash-table stats:
+# Load=139/8192=2%, Rehash=0, Collisions=2/656=0%
+# Finished Make data base on Wed Nov 24 19:27:40 2021
+
+ 

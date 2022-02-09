@@ -1,0 +1,9 @@
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/install/strip.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/install/local.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/install.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/list_install_components.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/rebuild_cache.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/uninstall.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/portaudio_static.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/edit_cache.dir
+/home/anne/Documents/UROP/THEDRONELAB/demo/noMotiv/voicedemo/CMakeFiles/portaudio.dir
